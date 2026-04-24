@@ -2,11 +2,33 @@ import streamlit as st
 
 st.set_page_config(page_title="My Portfolio", page_icon="🌐")
 
-st.markdown("""
-<style>
-.stApp { background-color: #f7f3ff; }
-</style>
-""", unsafe_allow_html=True)
+# STYLE INCLUDED
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(135deg, #d9c2ff, #e6e6e6, #ffb3d9);
+    }
+
+    html, body, .stApp, [class*="css"] {
+        color: #000000 !important;
+    }
+
+    p, span, label, div {
+        color: #000000 !important;
+    }
+
+    input, textarea {
+        color: #000000 !important;
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: rgba(255,255,255,0.8);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("Welcome to My Portfolio")
 
