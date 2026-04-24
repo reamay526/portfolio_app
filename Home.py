@@ -6,12 +6,15 @@ st.markdown("""
 <style>
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+}
+
+html, body, .stApp {
+    color: #000000 !important;
     font-family: Arial;
-    text-align: center;
 }
 
 h1, h2, h3 {
-    color: #3b1b5a;
+    color: #000000 !important;
 }
 
 .block-container {
