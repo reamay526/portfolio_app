@@ -35,4 +35,4 @@ with col2:
 
 st.markdown("---")
 
-st.success("Welcome! Explore my portfolio using the sidebar.")
+st.success("Explore my portfolio using the sidebar.")
