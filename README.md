@@ -55,6 +55,7 @@ BSCS 3B
 
 pip install streamlit
 streamlit run Home.py
+
 --- 
 
 ## 🌐 Deployment
