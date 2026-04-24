@@ -1,27 +1,18 @@
 import streamlit as st
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 st.title("Skills")
 
-python = st.slider("Python", 0, 100, 70)
-st.progress(python)
+st.subheader("Programming")
+st.progress(80)
+st.write("Python")
 
-html = st.slider("HTML", 0, 100, 60)
-st.progress(html)
+st.progress(70)
+st.write("JavaScript")
 
-css = st.slider("CSS", 0, 100, 55)
-st.progress(css)
+st.progress(60)
+st.write("HTML/CSS")
 
-st.checkbox("GitHub")
-st.checkbox("Streamlit")
-st.checkbox("VS Code")
+st.subheader("Tools")
+st.write("- GitHub")
+st.write("- VS Code")
+st.write("- Streamlit")
