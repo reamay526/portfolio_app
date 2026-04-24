@@ -44,5 +44,9 @@ with col2:
 
 st.markdown("---")
 
-st.success("Welcome! Explore my skills, projects, and contact details in the sidebar.")
-st.info("Simple Streamlit Multipage Portfolio")
+# WELCOME BACK (RESTORED)
+st.success("👋 Welcome to my Portfolio!")
+st.info("Explore my skills, projects, and contact details using the sidebar.")
+
+st.markdown("---")
+st.write("Simple Streamlit Multipage Portfolio")
