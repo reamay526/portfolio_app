@@ -37,7 +37,7 @@ section[data-testid="stSidebar"] {
 
 with st.sidebar:
     st.markdown("## 🌸 Portfolio")
-    page = st.radio("Navigation", ["Home", "About", "Skills", "Projects", "Contact"])
+    page = st.radio("Menu", ["Home", "About", "Skills", "Projects", "Contact"])
     st.markdown("---")
     st.write("BSCS 3B")
     st.write("Aspiring Developer")
@@ -57,3 +57,44 @@ if page == "Home":
 
         if st.button("Say Hello"):
             st.success("Thanks for visiting my portfolio!")
+
+elif page == "About":
+    st.title("About Me")
+    st.write("I enjoy learning programming and building simple applications.")
+    st.subheader("Education")
+    st.write("BS Computer Science")
+    st.subheader("Goals")
+    st.write("Improve coding skills")
+    st.write("Build useful projects")
+
+elif page == "Skills":
+    st.title("Skills")
+    st.write("Python")
+    st.write("HTML")
+    st.write("CSS")
+    st.subheader("Tools")
+    st.write("GitHub")
+    st.write("VS Code")
+    st.write("Streamlit")
+
+elif page == "Projects":
+    st.title("Projects")
+    st.subheader("Portfolio App")
+    st.write("Multipage Streamlit portfolio website")
+    st.subheader("Other Projects")
+    st.write("Simple Python apps")
+    st.write("UI practice projects")
+    st.write("School systems")
+
+elif page == "Contact":
+    st.title("Contact Me")
+
+    name = st.text_input("Name")
+    email = st.text_input("Email")
+    message = st.text_area("Message")
+
+    if st.button("Send"):
+        if name and email and message:
+            st.success("Message sent successfully!")
+        else:
+            st.error("Please fill all fields.")
