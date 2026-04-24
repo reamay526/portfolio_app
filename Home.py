@@ -1,33 +1,23 @@
 import streamlit as st
 
-st.set_page_config(page_title="My Portfolio", layout="wide")
+st.set_page_config(page_title="Portfolio", layout="wide")
 
 st.markdown("""
 <style>
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    color: #000000;
     font-family: Arial;
 }
 
-html, body, .stApp {
-    color: #000000 !important;
-}
-
 .block-container {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 h1, h2, h3 {
-    color: #000000 !important;
-    font-weight: 700;
-}
-
-.card {
-    background: rgba(255,255,255,0.75);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #000000;
 }
 </style>
 """, unsafe_allow_html=True)
