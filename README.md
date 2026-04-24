@@ -49,8 +49,7 @@ portfolio_app/
 ├── 1_About.py
 ├── 2_Skills.py
 ├── 3_Projects.py
-└── 4_Contact.py
-
+── 4_Contact.py
 
 ---
 
