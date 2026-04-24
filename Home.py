@@ -10,34 +10,26 @@ st.markdown("""
     font-family: Arial;
 }
 
-/* FORCE ALL TEXT TO BLACK */
-html, body, .stApp, p, div, span, label, h1, h2, h3, h4 {
+html, body, .stApp, p, div, span, label, h1, h2, h3 {
     color: #000000 !important;
 }
 
-/* CENTER HEADINGS */
 h1, h2, h3 {
     text-align: center;
-}
-
-/* BUTTON TEXT BLACK */
-.stButton > button {
-    color: black !important;
-}
-
-/* INFO/SUCCESS/WARNING TEXT FIX */
-.stAlert, .stSuccess, .stInfo, .stWarning {
-    color: black !important;
 }
 
 .block-container {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
+
+.stButton > button {
+    color: black !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# CENTER MAIN CONTENT
+# MAIN SECTION
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
@@ -57,10 +49,9 @@ with col2:
         if st.button("🚀 Say Hello"):
             st.success("Hello! Thanks for visiting my portfolio 👋")
 
-# DIVIDER
 st.markdown("---")
 
-# CARDS SECTION (ALL BLACK TEXT)
+# 🔥 REPLACED SECTION (NEW CONTENT INSTEAD OF ABOUT/SKILLS/CONTACT)
 c1, c2, c3 = st.columns(3)
 
 card = """
@@ -76,18 +67,18 @@ text-align: center;
 
 with c1:
     st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 👩‍💻 About")
-    st.info("Passionate about building clean and useful applications")
+    st.markdown("### 🎯 Goal")
+    st.write("To become a skilled and creative developer")
     st.markdown("</div>", unsafe_allow_html=True)
 
 with c2:
     st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 🛠 Skills")
-    st.success("Python • HTML • CSS")
+    st.markdown("### 🚀 Focus")
+    st.write("Building clean and functional web applications")
     st.markdown("</div>", unsafe_allow_html=True)
 
 with c3:
     st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 📬 Contact")
-    st.warning("Open for collaboration")
+    st.markdown("### 🌱 Learning")
+    st.write("Improving Python, UI design, and web development skills")
     st.markdown("</div>", unsafe_allow_html=True)
