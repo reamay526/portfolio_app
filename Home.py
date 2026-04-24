@@ -2,29 +2,37 @@ import streamlit as st
 
 st.set_page_config(page_title="My Portfolio", layout="wide")
 
-# ================= THEME =================
+# ================= THEME (YOUR COLORS) =================
 st.markdown(
     """
     <style>
+
     .stApp {
-        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-        color: white;
+        background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    }
+
+    html, body, .stApp, p, div, span, label {
+        color: #000000 !important;
     }
 
     h1, h2, h3 {
-        color: #ff4d6d;
+        color: #3b1b5a;
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: rgba(255,255,255,0.9);
     }
 
     .stButton > button {
-        background-color: #6a0dad;
+        background-color: #3b1b5a;
         color: white;
         border-radius: 10px;
-        border: none;
     }
 
     .stButton > button:hover {
-        background-color: #ff4d6d;
+        background-color: #ff4fa3;
     }
+
     </style>
     """,
     unsafe_allow_html=True
@@ -32,7 +40,7 @@ st.markdown(
 
 # ================= SIDEBAR =================
 with st.sidebar:
-    st.markdown("## 🌸 My Portfolio")
+    st.markdown("## 🌸 Portfolio")
 
     page = st.radio(
         "Navigation",
@@ -43,7 +51,7 @@ with st.sidebar:
     st.write("BSCS 3B")
     st.write("Aspiring Developer")
 
-# ================= HOME PAGE =================
+# ================= HOME =================
 if page == "🏠 Home":
 
     col1, col2 = st.columns([1, 2])
@@ -59,31 +67,18 @@ if page == "🏠 Home":
         st.write("Interested in Web Development")
 
     st.markdown("---")
-    st.info("Explore my portfolio using the sidebar.")
 
     if st.button("Say Hello"):
-        st.success("Thanks for visiting!")
+        st.success("Thanks for visiting my portfolio!")
 
-# ================= ABOUT =================
 elif page == "🙋 About":
-    st.title("About")
-    st.write("KEEP YOUR ORIGINAL ABOUT TEXT FROM YOUR FILE")
+    st.title("About Me")
+    st.write("See About page")
 
-# ================= PROJECTS =================
 elif page == "💼 Projects":
     st.title("Projects")
-    st.write("KEEP YOUR ORIGINAL PROJECT TEXT FROM YOUR FILE")
+    st.write("See Projects page")
 
-# ================= CONTACT =================
 elif page == "📩 Contact":
     st.title("Contact")
-
-    name = st.text_input("Name")
-    email = st.text_input("Email")
-    message = st.text_area("Message")
-
-    if st.button("Send"):
-        if name and email and message:
-            st.success("Message sent successfully!")
-        else:
-            st.error("Please fill all fields.")
+    st.write("See Contact page")
