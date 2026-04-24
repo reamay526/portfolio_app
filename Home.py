@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", page_icon="🌐", layout="centered")
 
-# STYLE (SAFE + READABLE)
+# CLEAN STYLE (READABLE + SOFT LOOK)
 st.markdown(
     """
     <style>
@@ -16,10 +16,12 @@ st.markdown(
         text-align: center;
     }
 
-    h1, h2, h3, h4, h5, h6,
-    p, span, label, div {
+    h1, h2, h3 {
         color: #000000 !important;
-        text-align: center;
+    }
+
+    p, div, span, label {
+        color: #000000 !important;
     }
 
     section[data-testid="stSidebar"] {
@@ -30,30 +32,28 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# 🔝 TOP HEADER (ABOVE EVERYTHING)
-st.markdown("## 🌐 Welcome to My Personal Portfolio")
-st.write("A simple multipage Streamlit project showcasing my skills, projects, and contact information.")
+# HEADER
+st.markdown("## 🌐 Welcome to My Portfolio")
+st.caption("Simple Streamlit Multipage Project")
 
 st.markdown("---")
 
-# LEFT IMAGE + RIGHT INFO
-col1, col2 = st.columns([1, 2])
+# PROFILE SECTION (CLEAN LAYOUT)
+col1, col2 = st.columns([1, 2], vertical_alignment="center")
 
 with col1:
-    st.image("mayie.png", width=180)
+    st.image("mayie.png", width=160)
 
 with col2:
-    st.markdown("## Rea May M. Villanueva")
-    st.write("🎓 BSCS 3B")
-    st.write("💻 Aspiring Developer")
-    st.write("🎨 UI/UX Learner")
+    st.markdown("### Rea May M. Villanueva")
+    st.write("BSCS 3B")
+    st.write("Aspiring Developer | UI/UX Learner")
 
 st.markdown("---")
 
 # WELCOME MESSAGE
-st.success("👋 Welcome! Explore my portfolio using the sidebar.")
-st.info("Check out my skills, projects, and contact page.")
+st.success("Welcome! Explore my skills, projects, and contact page using the sidebar.")
 
 st.markdown("---")
 
-st.write("Simple Streamlit Multipage Portfolio")
+st.write("Built using Streamlit")
