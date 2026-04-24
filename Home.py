@@ -2,12 +2,11 @@ import streamlit as st
 
 st.set_page_config(page_title="Streamlit Multipage App", page_icon="🌐", layout="wide")
 
-# Animated gradient + black text
 st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #fad0c4);
+        background: linear-gradient(-45deg, #d9c2ff, #e6e6e6, #ff4f8b, #caa6ff);
         background-size: 400% 400%;
         animation: gradientBG 12s ease infinite;
     }
@@ -18,12 +17,20 @@ st.markdown(
         100% {background-position: 0% 50%;}
     }
 
-    html, body, [class*="css"] {
-        color: black !important;
+    html, body, .stApp, [class*="css"] {
+        color: #000000 !important;
+    }
+
+    p, span, label, div {
+        color: #000000 !important;
+    }
+
+    input, textarea {
+        color: #000000 !important;
     }
 
     section[data-testid="stSidebar"] {
-        background-color: rgba(255, 255, 255, 0.65);
+        background-color: rgba(255,255,255,0.75);
     }
     </style>
     """,
@@ -33,11 +40,11 @@ st.markdown(
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("butterfly.png")
+    st.image("butterfly.png", use_column_width=True)
 
 with col2:
     st.title("Rea May M. Villanueva")
     st.subheader("BSCS 3B")
-    st.write("Streamlit Multipage Web Application")
+    st.write("A simple Streamlit Multipage Web Application")
 
-st.info("Use the sidebar to navigate.")
+st.info("Use the sidebar to navigate through pages.")
