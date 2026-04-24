@@ -21,13 +21,13 @@ section[data-testid="stSidebar"] {
 st.title("Skills")
 
 st.write("Python")
-st.progress(80)
+st.progress(85)
 
 st.write("HTML")
-st.progress(70)
+st.progress(88)
 
 st.write("CSS")
-st.progress(60)
+st.progress(87)
 
 st.subheader("Tools")
 st.write("- GitHub")
