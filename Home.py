@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="My Portfolio", page_icon="🌐", layout="centered")
 
-# STYLE (ALL BLACK TEXT + SIMPLE BACKGROUND)
+# STYLE (ALL BLACK TEXT + CLEAN DESIGN)
 st.markdown(
     """
     <style>
@@ -21,12 +21,10 @@ st.markdown(
         color: #000000 !important;
     }
 
-    /* FORCE INPUT TEXT BLACK */
     input, textarea {
         color: #000000 !important;
     }
 
-    /* SIDEBAR CLEAN */
     section[data-testid="stSidebar"] {
         background-color: rgba(255,255,255,0.9);
     }
@@ -38,7 +36,7 @@ st.markdown(
 # TITLE
 st.title("Welcome to My Portfolio")
 
-st.write("Simple Streamlit project for basic Computer Science")
+st.write("Simple Streamlit multipage website")
 
 st.markdown("---")
 
@@ -51,10 +49,10 @@ with col1:
 with col2:
     st.subheader("Rea May M. Villanueva")
     st.write("BSCS 3B")
-    st.write("Basic Computer Science Student")
-    st.write("Learning Programming & Web Development")
+    st.write("Aspiring Developer & Designer")
+    st.write("Interested in Web Development")
 
 st.markdown("---")
 
-# MESSAGE
-st.success("Welcome! Use the sidebar to navigate through my pages.")
+# WELCOME MESSAGE
+st.success("Welcome! Explore my portfolio using the sidebar.")
