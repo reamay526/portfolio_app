@@ -62,7 +62,7 @@ streamlit run Home.py
 This app is deployed using Streamlit Community Cloud.  
 
 👉 Live App Link:  
-(Add your Streamlit link here after deployment)
+https://reamay526-portfolio-app-home-veqy4o.streamlit.app
 
 ---
 
