@@ -1,8 +1,8 @@
 import streamlit as st
 
-st.set_page_config(page_title="Portfolio", page_icon="🌐", layout="centered")
+st.set_page_config(page_title="My Portfolio", page_icon="🌐", layout="centered")
 
-# CLEAN STYLE (READABLE + SOFT LOOK)
+# SIMPLE STYLE (clean + readable)
 st.markdown(
     """
     <style>
@@ -16,14 +16,6 @@ st.markdown(
         text-align: center;
     }
 
-    h1, h2, h3 {
-        color: #000000 !important;
-    }
-
-    p, div, span, label {
-        color: #000000 !important;
-    }
-
     section[data-testid="stSidebar"] {
         background-color: rgba(255,255,255,0.9);
     }
@@ -32,28 +24,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# HEADER
-st.markdown("## 🌐 Welcome to My Portfolio")
-st.caption("Simple Streamlit Multipage Project")
+# TITLE
+st.title("Welcome to My Portfolio")
+
+st.write("Simple project made using Streamlit (basic CS level)")
 
 st.markdown("---")
 
-# PROFILE SECTION (CLEAN LAYOUT)
-col1, col2 = st.columns([1, 2], vertical_alignment="center")
+# IMAGE + INFO
+col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("mayie.png", width=160)
+    st.image("mayie.png", width=150)
 
 with col2:
-    st.markdown("### Rea May M. Villanueva")
+    st.subheader("Rea May M. Villanueva")
     st.write("BSCS 3B")
-    st.write("Aspiring Developer | UI/UX Learner")
+    st.write("Basic CS Student")
+    st.write("Learning Python & Web Development")
 
 st.markdown("---")
 
-# WELCOME MESSAGE
-st.success("Welcome! Explore my skills, projects, and contact page using the sidebar.")
-
-st.markdown("---")
-
-st.write("Built using Streamlit")
+# MESSAGE
+st.success("Use the sidebar to navigate through my pages.")
