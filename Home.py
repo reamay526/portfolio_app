@@ -10,18 +10,34 @@ st.markdown("""
     font-family: Arial;
 }
 
+/* FORCE ALL TEXT TO BLACK */
+html, body, .stApp, p, div, span, label, h1, h2, h3, h4 {
+    color: #000000 !important;
+}
+
+/* CENTER HEADINGS */
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* BUTTON TEXT BLACK */
+.stButton > button {
+    color: black !important;
+}
+
+/* INFO/SUCCESS/WARNING TEXT FIX */
+.stAlert, .stSuccess, .stInfo, .stWarning {
+    color: black !important;
+}
+
 .block-container {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
-
-h1, h2, h3 {
-    text-align: center;
-    color: #000000;
-}
 </style>
 """, unsafe_allow_html=True)
 
+# CENTER MAIN CONTENT
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
@@ -41,8 +57,10 @@ with col2:
         if st.button("🚀 Say Hello"):
             st.success("Hello! Thanks for visiting my portfolio 👋")
 
+# DIVIDER
 st.markdown("---")
 
+# CARDS SECTION (ALL BLACK TEXT)
 c1, c2, c3 = st.columns(3)
 
 card = """
