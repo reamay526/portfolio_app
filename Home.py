@@ -50,31 +50,14 @@ with col2:
 
 c1, c2, c3 = st.columns(3)
 
-card = """
-<div style="
-background-color: rgba(255,255,255,0.85);
-padding: 18px;
-border-radius: 12px;
-box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
-color: black;
-text-align: center;
-">
-"""
-
 with c1:
-    st.markdown(card, unsafe_allow_html=True)
     st.markdown("### 🎯 Goal")
     st.write("To become a skilled and creative developer")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with c2:
-    st.markdown(card, unsafe_allow_html=True)
     st.markdown("### 🚀 Focus")
     st.write("Building clean and functional web applications")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with c3:
-    st.markdown(card, unsafe_allow_html=True)
     st.markdown("### 🌱 Learning")
     st.write("Improving Python, UI design, and web development skills")
-    st.markdown("</div>", unsafe_allow_html=True)
