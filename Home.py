@@ -1,8 +1,17 @@
 import streamlit as st
 
-st.set_page_config(page_title="My Portfolio", page_icon="🌐", layout="wide")
+st.set_page_config(page_title="Streamlit Multipage App", page_icon="🌐", layout="wide")
 
-st.title("🌐 My Streamlit Portfolio")
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 col1, col2 = st.columns([1, 2])
 
@@ -10,8 +19,8 @@ with col1:
     st.image("butterfly.png")
 
 with col2:
-    st.subheader("Rea May M. Villanueva")
-    st.write("BSCS 3B")
-    st.write("Simple Streamlit Multipage Project")
+    st.title("Rea May M. Villanueva")
+    st.subheader("BSCS 3B")
+    st.write("Streamlit Multipage Web Application")
 
-st.info("Use the sidebar to navigate through pages.")
+st.info("Use the sidebar to navigate through the pages.")
