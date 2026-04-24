@@ -38,7 +38,9 @@ BSCS 3B
 
 ---
 
-## 📁 Project Structureportfolio_app/
+## 📁 Project Structure
+
+portfolio_app/
 │
 ├── Home.py
 ├── mayie.png
@@ -49,6 +51,7 @@ BSCS 3B
 ├── 3_Projects.py
 └── 4_Contact.py
 
+
 ---
 
 ## 🚀 How to Run Locally
@@ -56,7 +59,8 @@ BSCS 3B
 pip install streamlit
 streamlit run Home.py
 
---- 
+
+---
 
 ## 🌐 Deployment
 This app is deployed using Streamlit Community Cloud.  
