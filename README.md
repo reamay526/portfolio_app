@@ -41,15 +41,14 @@ BSCS 3B
 ## 📁 Project Structure
 
 portfolio_app/
-│
-├── Home.py
-├── mayie.png
-├── requirements.txt
-└── pages/
-├── 1_About.py
-├── 2_Skills.py
-├── 3_Projects.py
-── 4_Contact.py
+ Home.py
+mayie.png
+requirements.txt
+pages/
+1_About.py
+2_Skills.py
+3_Projects.py
+4_Contact.py
 
 ---
 
