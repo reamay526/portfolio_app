@@ -30,7 +30,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# LEFT IMAGE + RIGHT TEXT
+# 🔝 TOP HEADER (ABOVE EVERYTHING)
+st.markdown("## 🌐 Welcome to My Personal Portfolio")
+st.write("A simple multipage Streamlit project showcasing my skills, projects, and contact information.")
+
+st.markdown("---")
+
+# LEFT IMAGE + RIGHT INFO
 col1, col2 = st.columns([1, 2])
 
 with col1:
@@ -44,9 +50,10 @@ with col2:
 
 st.markdown("---")
 
-# WELCOME BACK (RESTORED)
-st.success("👋 Welcome to my Portfolio!")
-st.info("Explore my skills, projects, and contact details using the sidebar.")
+# WELCOME MESSAGE
+st.success("👋 Welcome! Explore my portfolio using the sidebar.")
+st.info("Check out my skills, projects, and contact page.")
 
 st.markdown("---")
+
 st.write("Simple Streamlit Multipage Portfolio")
