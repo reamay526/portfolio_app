@@ -1,7 +1,8 @@
 import streamlit as st
 
-st.set_page_config(page_title="My Portfolio", page_icon="🌐")
+st.set_page_config(page_title="My Portfolio", page_icon="🌐", layout="centered")
 
+# STYLE (same safe gradient + readable text)
 st.markdown(
     """
     <style>
@@ -21,12 +22,6 @@ st.markdown(
         text-align: center;
     }
 
-    input, textarea {
-        background-color: rgba(255,255,255,0.9) !important;
-        color: #000000 !important;
-        text-align: center;
-    }
-
     section[data-testid="stSidebar"] {
         background-color: rgba(255,255,255,0.9);
     }
@@ -35,15 +30,33 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Welcome to My Portfolio")
+# HEADER
+st.title("🌐 My Portfolio")
 
-col1, col2 = st.columns(2)
+st.markdown("### Welcome to my personal website")
+
+st.markdown("---")
+
+# CENTERED CARD STYLE LAYOUT
+col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("butterfly.png")
+    st.image("butterfly.png", width=200)
 
 with col2:
-    st.write("Name: Rea May M. Villanueva")
-    st.write("Course: BSCS 3B")
+    st.markdown("## Rea May M. Villanueva")
+    st.write("🎓 BSCS 3B Student")
+    st.write("💻 Aspiring Developer")
+    st.write("🎨 Interested in UI/UX Design")
 
-st.success("Simple Streamlit Multipage App")
+st.markdown("---")
+
+# HIGHLIGHT BOX STYLE
+st.success("🚀 Explore my skills, projects, and contact details using the sidebar")
+
+st.info("💡 This portfolio is built using Streamlit multipage app")
+
+st.markdown("---")
+
+# FOOTER STYLE
+st.markdown("📌 Simple | Clean | Beginner Friendly Portfolio")
