@@ -40,7 +40,7 @@ with st.sidebar:
 if page == "Home":
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image("assets/images/profile.jpg", width=200)
+        st.image("mayie.png", width=200)
         st.title("Welcome to My Portfolio")
         st.subheader("Rea May M. Villanueva")
         st.write("BSCS 3B")
