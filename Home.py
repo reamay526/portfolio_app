@@ -16,23 +16,24 @@ html, body, .stApp {
 h1, h2, h3 {
     color: #000000 !important;
 }
-
-.block-container {
-    padding-top: 2rem;
-}
 </style>
 """, unsafe_allow_html=True)
 
-col1, col2 = st.columns([1, 2])
+st.markdown("<br><br>", unsafe_allow_html=True)
 
-with col1:
-    st.image("mayie.png", width=220)
+col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    st.title("Welcome to My Portfolio")
-    st.subheader("Rea May M. Villanueva")
-    st.write("BSCS 3B")
-    st.write("Aspiring Developer & Designer")
-    st.write("Interested in Web Development")
+    colA, colB = st.columns([1, 2])
 
-    st.button("Say Hello 👋")
+    with colA:
+        st.image("mayie.png", width=220)
+
+    with colB:
+        st.title("Welcome to My Portfolio")
+        st.subheader("Rea May M. Villanueva")
+        st.write("BSCS 3B")
+        st.write("Aspiring Developer & Designer")
+        st.write("Interested in Web Development")
+
+        st.button("Say Hello 👋")
