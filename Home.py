@@ -9,7 +9,7 @@ st.markdown("""
     text-align: center;
 }
 
-html, body, .stApp, p, div, span, label {
+html, body, .stApp {
     color: #000000 !important;
     text-align: center;
 }
@@ -18,38 +18,20 @@ h1, h2, h3 {
     color: #3b1b5a;
     text-align: center;
 }
-
-section[data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.9);
-}
-
-.stButton > button {
-    background-color: #3b1b5a;
-    color: white;
-    border-radius: 10px;
-}
-
-.stButton > button:hover {
-    background-color: #ff4fa3;
-}
 </style>
 """, unsafe_allow_html=True)
 
-with st.sidebar:
-    page = st.radio("Navigation", ["Home", "About", "Skills", "Projects", "Contact"])
+col1, col2 = st.columns([1, 2])
 
-if page == "Home":
-    col1, col2 = st.columns([1, 2])
+with col1:
+    st.image("mayie.png", width=220)
 
-    with col1:
-        st.image("mayie.png", width=220)
+with col2:
+    st.title("Welcome to My Portfolio")
+    st.subheader("Rea May M. Villanueva")
+    st.write("BSCS 3B")
+    st.markdown("Aspiring Developer & Designer")
+    st.write("Interested in Web Development")
 
-    with col2:
-        st.title("Welcome to My Portfolio")
-        st.subheader("Rea May M. Villanueva")
-        st.write("BSCS 3B")
-        st.markdown("Aspiring Developer & Designer")
-        st.write("Interested in Web Development")
-
-        if st.button("Say Hello"):
-            st.success("Thanks for visiting my portfolio!")
+    if st.button("Say Hello"):
+        st.success("Thanks for visiting my portfolio!")
