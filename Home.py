@@ -5,7 +5,7 @@ st.set_page_config(page_title="My Portfolio", layout="wide")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("assets/images/profile.jpg", width=180)
+    st.image("mayie.png", width=180)
 
 with col2:
     st.title("Welcome to My Portfolio")
@@ -27,6 +27,5 @@ st.markdown("---")
 st.markdown("## 📌 Navigation")
 st.info("Use the sidebar to explore my portfolio: About • Projects • Contact")
 
-# --- SMALL INTERACTIVE ELEMENT (BOOSTS SCORE) ---
 if st.button("✨ Say Hello"):
     st.success("Thanks for visiting my portfolio!")
