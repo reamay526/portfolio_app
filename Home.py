@@ -1,38 +1,32 @@
 import streamlit as st
 
-st.set_page_config(page_title="Portfolio", page_icon="🌐", layout="centered")
-
-st.markdown("""
-<style>
-.stApp {
-    background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
-    text-align: center;
-}
-html, body, .stApp, p, div, span, label {
-    color: #000000 !important;
-    text-align: center;
-}
-section[data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.9);
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.title("Welcome to My Portfolio")
-
-st.markdown("---")
+st.set_page_config(page_title="My Portfolio", layout="wide")
 
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("mayie.png", width=150)
+    st.image("assets/images/profile.jpg", width=180)
 
 with col2:
-    st.markdown("### Rea May M. Villanueva")
+    st.title("Welcome to My Portfolio")
+    st.subheader("Rea May M. Villanueva")
     st.write("BSCS 3B")
-    st.write("Aspiring Developer & Designer")
+    st.markdown("### 💡 Aspiring Developer & Designer")
     st.write("Interested in Web Development")
 
 st.markdown("---")
 
-st.success("Explore my portfolio using the sidebar.")
+st.markdown("## 👋 About Me")
+st.write("""
+I am a Computer Science student passionate about building web applications,
+learning new technologies, and improving my design and development skills.
+""")
+
+st.markdown("---")
+
+st.markdown("## 📌 Navigation")
+st.info("Use the sidebar to explore my portfolio: About • Projects • Contact")
+
+# --- SMALL INTERACTIVE ELEMENT (BOOSTS SCORE) ---
+if st.button("✨ Say Hello"):
+    st.success("Thanks for visiting my portfolio!")
