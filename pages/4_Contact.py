@@ -1,31 +1,37 @@
 import streamlit as st
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.set_page_config(page_title="Contact")
+
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    text-align: center;
+}
+html, body, .stApp, p, div, span, label {
+    color: #000000 !important;
+    text-align: center;
+}
+section[data-testid="stSidebar"] {
+    background-color: rgba(255,255,255,0.9);
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.title("Contact Me")
 
-with st.form("contact_form"):
-    name = st.text_input("Name")
-    email = st.text_input("Email")
-    message = st.text_area("Message")
+name = st.text_input("Name")
+email = st.text_input("Email")
+message = st.text_area("Message")
 
-    submit = st.form_submit_button("Send")
+if st.button("Send"):
+    if name and email and message:
+        st.success("Message sent successfully!")
+    else:
+        st.error("Please fill all fields.")
 
-    if submit:
-        if name and email and message:
-            st.success("Message sent successfully! ✅")
-        else:
-            st.error("Please fill all fields.")
+st.write("GitHub: https://github.com/reamay526")
+st.write("Facebook: https://www.facebook.com/rea.villanueva.9277")
 
-st.markdown("### Social Links")
-st.write("- GitHub: https://github.com/reamay526")
-st.write("- Facebook: https://www.facebook.com/rea.villanueva.9277")
+
+
