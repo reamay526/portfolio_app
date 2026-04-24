@@ -1,28 +1,14 @@
-# Streamlit Multipage App
+Streamlit Multipage Portfolio
 
-## Name
-Rea May M. Villanueva (BSCS 3B)
+Name: Rea May M. Villanueva  
+Course: BSCS 3B  
 
-## Description
-A multipage web application built using Streamlit framework.
-
-## Pages
+Pages:
 - Home
 - About
 - Skills
 - Projects
 - Contact
 
-## Features
-- Multipage navigation
-- Interactive UI components
-- Clean gradient design
-- Beginner-friendly implementation
-
-## Tech Stack
-- Python
-- Streamlit
-
-## How to Run
-pip install streamlit
+Run:
 streamlit run Home.py
