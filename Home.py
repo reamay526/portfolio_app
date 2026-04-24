@@ -43,18 +43,14 @@ with st.sidebar:
     st.write("Aspiring Developer")
 
 if page == "Home":
-    col1, col2 = st.columns([1, 2])
-
-    with col1:
-        st.image("mayie.png", width=220)
-
+    col1, col2, col3 = st.columns(3)
     with col2:
+        st.image("mayie.png", width=200)
         st.title("Welcome to My Portfolio")
         st.subheader("Rea May M. Villanueva")
         st.write("BSCS 3B")
         st.markdown("Aspiring Developer & Designer")
         st.write("Interested in Web Development")
-
         if st.button("Say Hello"):
             st.success("Thanks for visiting my portfolio!")
 
@@ -70,12 +66,18 @@ elif page == "About":
 elif page == "Skills":
     st.title("Skills")
     st.write("Python")
+    st.progress(85)
+
     st.write("HTML")
+    st.progress(88)
+
     st.write("CSS")
+    st.progress(87)
+
     st.subheader("Tools")
-    st.write("GitHub")
-    st.write("VS Code")
-    st.write("Streamlit")
+    st.write("- GitHub")
+    st.write("- VS Code")
+    st.write("- Streamlit")
 
 elif page == "Projects":
     st.title("Projects")
