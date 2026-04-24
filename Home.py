@@ -6,30 +6,32 @@ st.markdown("""
 <style>
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    font-family: Arial;
 }
 
 html, body, .stApp {
     color: #000000 !important;
-    font-family: Arial;
 }
 
 h1, h2, h3 {
     color: #000000 !important;
 }
+
+.block-container {
+    padding-top: 3rem;
+}
 </style>
 """, unsafe_allow_html=True)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    colA, colB = st.columns([1, 2])
+    left, right = st.columns([1, 2])
 
-    with colA:
+    with left:
         st.image("mayie.png", width=220)
 
-    with colB:
+    with right:
         st.title("Welcome to My Portfolio")
         st.subheader("Rea May M. Villanueva")
         st.write("BSCS 3B")
