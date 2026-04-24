@@ -1,21 +1,28 @@
-# 🌐 Streamlit Multipage App
+# Streamlit Multipage App
 
-## 👩‍💻 Student
+## Name
 Rea May M. Villanueva (BSCS 3B)
 
-## 📌 Description
-A simple multipage Streamlit web application created for academic purposes.
+## Description
+A multipage web application built using Streamlit framework.
 
-## 📄 Pages
+## Pages
 - Home
 - About
 - Skills
 - Projects
 - Contact
 
-## ▶️ Run Instructions
-pip install streamlit  
-streamlit run Home.py
+## Features
+- Multipage navigation
+- Interactive UI components
+- Clean gradient design
+- Beginner-friendly implementation
 
-## 🌐 Deployment
-Can be deployed using Streamlit Community Cloud via GitHub repository.
+## Tech Stack
+- Python
+- Streamlit
+
+## How to Run
+pip install streamlit
+streamlit run Home.py
