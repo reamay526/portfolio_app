@@ -1,5 +1,22 @@
 import streamlit as st
 
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    font-family: Arial;
+}
+
+html, body, .stApp {
+    color: #000000 !important;
+}
+
+.block-container {
+    padding-top: 3rem;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Contact Me")
 
 name = st.text_input("Name")
@@ -11,9 +28,6 @@ if st.button("Send"):
         st.success("Message sent successfully!")
     else:
         st.error("Please fill all fields.")
-
+        
 st.write("GitHub: https://github.com/reamay526")
 st.write("Facebook: https://www.facebook.com/rea.villanueva.9277")
-
-
-
