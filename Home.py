@@ -58,8 +58,7 @@ if page == "🏠 Home":
             st.success("Thanks for visiting!")
 
     with col2:
-        st.image("mayie.png
-        ", width=200)
+        st.image("mayie.png", width=200)
 
 elif page == "🙋 About":
     st.title("About Me")
