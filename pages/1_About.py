@@ -1,29 +1,38 @@
 import streamlit as st
 
+st.set_page_config(page_title="My Portfolio", layout="wide")
+
 st.markdown("""
 <style>
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
-    font-family: Arial;
 }
 
 html, body, .stApp {
     color: #000000 !important;
+    font-family: Arial;
 }
 
 .block-container {
     padding-top: 3rem;
 }
+
+h1, h2, h3 {
+    color: #000000 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
-st.title("About Me")
+col1, col2 = st.columns([1, 2])
 
-st.write("I enjoy learning programming and building simple applications.")
+with col1:
+    st.image("mayie.png", width=220)
 
-st.subheader("Education")
-st.write("BS Computer Science")
+with col2:
+    st.title("Welcome to My Portfolio")
+    st.write("Rea May M. Villanueva")
+    st.write("BSCS 3B")
+    st.write("Aspiring Developer & Designer")
+    st.write("Interested in Web Development")
 
-st.subheader("Goals")
-st.write("Improve coding skills")
-st.write("Build useful projects")
+    st.button("Say Hello 👋")
