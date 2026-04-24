@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", page_icon="🌐", layout="centered")
 
-# STYLE (SAFE GRADIENT + READABLE TEXT)
 st.markdown(
     """
     <style>
@@ -30,10 +29,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# PROFILE IMAGE FIRST (CENTERED)
-st.image("butterfly.png", width=180)
 
-# NAME + INFO
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    st.image("mayie.png", width=180)
+
+st.markdown("---")
+
 st.markdown("## Rea May M. Villanueva")
 st.write("🎓 BSCS 3B")
 st.write("💻 Aspiring Developer")
@@ -41,7 +44,5 @@ st.write("🎨 UI/UX Learner")
 
 st.markdown("---")
 
-# MESSAGE BOX
 st.success("Welcome! Explore my skills, projects, and contact details in the sidebar.")
-
-st.info("This is a simple Streamlit multipage portfolio project.")
+st.info("Simple Streamlit Multipage Portfolio")
