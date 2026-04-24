@@ -54,17 +54,6 @@ st.markdown("---")
 # 🔥 REPLACED SECTION (NEW CONTENT INSTEAD OF ABOUT/SKILLS/CONTACT)
 c1, c2, c3 = st.columns(3)
 
-card = """
-<div style="
-background-color: rgba(255,255,255,0.85);
-padding: 18px;
-border-radius: 12px;
-box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
-color: black;
-text-align: center;
-">
-"""
-
 with c1:
     st.markdown(card, unsafe_allow_html=True)
     st.markdown("### 🎯 Goal")
