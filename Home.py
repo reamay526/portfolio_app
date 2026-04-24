@@ -29,7 +29,6 @@ h1, h2, h3 {
 </style>
 """, unsafe_allow_html=True)
 
-# MAIN SECTION
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
@@ -48,26 +47,3 @@ with col2:
 
         if st.button("🚀 Say Hello"):
             st.success("Hello! Thanks for visiting my portfolio 👋")
-
-st.markdown("---")
-
-# 🔥 REPLACED SECTION (NEW CONTENT INSTEAD OF ABOUT/SKILLS/CONTACT)
-c1, c2, c3 = st.columns(3)
-
-with c1:
-    st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with c2:
-    st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with c3:
-    st.markdown(card, unsafe_allow_html=True)
-    st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
-    st.markdown("</div>", unsafe_allow_html=True)
