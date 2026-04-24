@@ -2,7 +2,7 @@
 
 ## 📌 Project Description
 This is a simple multipage portfolio web application built using Streamlit.  
-It is designed to present personal information, skills, projects, and contact details in a clean and interactive web interface.
+It displays personal information, skills, projects, and contact details in a clean and interactive UI.
 
 ---
 
@@ -13,7 +13,7 @@ BSCS 3B
 ---
 
 ## 📄 Pages
-- Home (Main Page)
+- Home
 - About
 - Skills
 - Projects
@@ -23,14 +23,12 @@ BSCS 3B
 
 ## 🎨 Features
 - Multipage navigation using Streamlit sidebar
-- Clean gradient background design
-- Black readable fonts for better visibility
+- Gradient background design
+- Black readable fonts
 - Profile image display
-- Interactive components:
-  - Contact form
-  - Progress bars
-  - Expandable project sections
-- Simple and user-friendly UI
+- Contact form
+- Progress bars
+- Expandable project sections
 
 ---
 
@@ -40,4 +38,39 @@ BSCS 3B
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structureportfolio_app/
+│
+├── Home.py
+├── mayie.png
+├── requirements.txt
+└── pages/
+├── 1_About.py
+├── 2_Skills.py
+├── 3_Projects.py
+└── 4_Contact.py
+
+---
+
+## 🚀 How to Run Locally
+
+pip install streamlit
+streamlit run Home.py
+--- 
+
+## 🌐 Deployment
+This app is deployed using Streamlit Community Cloud.  
+
+👉 Live App Link:  
+(Add your Streamlit link here after deployment)
+
+---
+
+## 🔗 Repository Link
+https://github.com/reamay526/portfolio_app
+
+---
+
+## 📌 Notes
+- Ensure all files are in correct folders
+- Make sure `mayie.png` is in the main directory
+- Home.py must be the root file
