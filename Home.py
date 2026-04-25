@@ -4,71 +4,78 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 
 st.markdown("""
 <style>
+
+/* CONSISTENT BACKGROUND (same as other pages) */
 .stApp {
-    background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
+/* REMOVE WHITE TOP GAP */
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+/* REMOVE CONTAINER WHITE BG */
+.block-container {
+    background: transparent !important;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* GLOBAL TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
     color: #000000 !important;
 }
 
-/* CENTER TITLE */
+/* TITLE */
 .top-title {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
+    color: white;
 }
 
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
-/* SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: white !important;
     font-weight: 500;
 }
 
-/* HOVER EFFECT */
 section[data-testid="stSidebar"] div:hover {
     background-color: rgba(255,255,255,0.15);
     border-radius: 10px;
 }
 
-/* BUTTON STYLE FIX */
-div.stButton > button, div.stButton > button:focus, div.stButton > button:active {
+/* BUTTON */
+div.stButton > button {
     background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
-    background-image: linear-gradient(90deg, #ff0057, #7a00ff) !important;
-    color: #ffffff !important;
+    color: white !important;
     border-radius: 20px;
     padding: 12px 24px;
-    border: 2px solid rgba(255,255,255,0.4);
+    border: none;
     font-weight: 700;
     box-shadow: 0 6px 18px rgba(255, 0, 87, 0.35);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    opacity: 1 !important;
-    cursor: pointer;
 }
 
 div.stButton > button:hover {
-    background: linear-gradient(90deg, #ff2e6f, #9b2dff) !important;
-    background-image: linear-gradient(90deg, #ff2e6f, #9b2dff) !important;
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
     box-shadow: 0 8px 22px rgba(155, 45, 255, 0.4);
 }
 
-.block-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 </style>
 """, unsafe_allow_html=True)
 
+# ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
+# ---------------- PROFILE SECTION ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
@@ -85,14 +92,12 @@ with col2:
         st.write("💻 Aspiring Developer & Designer")
         st.write("🌐 Interested in Web Development")
 
-        st.write("")
-        st.write("")
-
         if st.button("🚀 Say Hello"):
             st.success("Hello! Thanks for visiting my portfolio 👋")
 
 st.markdown("---")
 
+# ---------------- INFO CARDS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
