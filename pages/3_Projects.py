@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Projects", layout="wide")
 
-# ---------------- STYLE (KEEP CONSISTENT DESIGN) ----------------
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -33,20 +33,16 @@ h1 {
     font-weight: 900 !important;
 }
 
-/* GLASS CARD (MATCH OTHER PAGES) */
+/* CARD */
 .card {
     background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 16px 18px;
+    padding: 18px;
     border-radius: 14px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.10);
     margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-/* CENTER TEXT */
-.card h3 {
     text-align: center;
 }
 
@@ -72,36 +68,23 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     <div class="card">
-    <h3>🌐 Portfolio Website</h3>
-    <p>
-    ✔ Built using Streamlit<br>
-    ✔ Multi-page structure<br>
-    ✔ Responsive UI design<br>
-    ✔ Personal developer portfolio
-    </p>
+    <h3>🌐 Portfolio App</h3>
+    <p>Streamlit Multipage Portfolio</p>
     </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
     <div class="card">
-    <h3>🧩 Other Projects</h3>
-    <p>
-    ✔ Python mini applications<br>
-    ✔ UI/UX practice layouts<br>
-    ✔ School-based system projects<br>
-    ✔ Coding exercises & experiments
-    </p>
+    <h3>👩‍💻 Personal Website</h3>
+    <p>HTML/CSS Personal Portfolio Design</p>
     </div>
     """, unsafe_allow_html=True)
 
-# ---------------- FUTURE PROJECT SECTION ----------------
+# ---------------- THIRD PROJECT ----------------
 st.markdown("""
 <div class="card">
-<h3>🚀 Future Goals</h3>
-<p>
-I aim to build more advanced full-stack applications, improve UI/UX design skills,
-and develop real-world systems that solve practical problems.
-</p>
+<h3>🎨 Bootstrap Project</h3>
+<p>Responsive Web Design Practice using Bootstrap</p>
 </div>
 """, unsafe_allow_html=True)
