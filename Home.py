@@ -11,46 +11,51 @@ st.markdown("""
     font-family: Arial;
 }
 
-/* FORCE BLACK TEXT */
+/* ALL TEXT BLACK */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
     color: #000000 !important;
 }
 
-/* SIDEBAR VISIBILITY FIX */
+/* SIDEBAR CLEAN */
 section[data-testid="stSidebar"] {
     background-color: rgba(255,255,255,0.95);
-    color: black !important;
 }
-
-/* SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: black !important;
 }
 
-/* BUTTON STYLE (VISIBLE) */
+/* TITLE IMPROVEMENT */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* BUTTON PREMIUM LOOK */
 .stButton > button {
-    background-color: #3b1b5a;
+    background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
     color: white !important;
-    border-radius: 10px;
-    padding: 8px 16px;
+    border-radius: 20px;
+    padding: 10px 20px;
     border: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .stButton > button:hover {
-    background-color: #ff4fa3;
-    color: white;
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* SPACING */
 .block-container {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# CENTER LAYOUT
+# MAIN CENTER
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
@@ -58,32 +63,35 @@ with col2:
     left, right = st.columns([1,2], vertical_alignment="center")
 
     with left:
-        st.image("mayie.png", width=260)  # BIGGER IMAGE
+        st.image("mayie.png", width=280)
 
     with right:
-        st.markdown("## 👋 Welcome to My Portfolio")  # ONE LINE CLEAN
+        st.markdown("## 👋 Welcome to My Portfolio")
         st.markdown("### Rea May M. Villanueva")
+
         st.write("🎓 BSCS 3B")
         st.write("💻 Aspiring Developer & Designer")
         st.write("🌐 Interested in Web Development")
 
+        st.write("")  # spacing
+
         if st.button("🚀 Say Hello"):
             st.success("Hello! Thanks for visiting my portfolio 👋")
 
-# SPACING
-st.markdown("---")
+# SPACE
+st.markdown("")
 
-# LOWER SECTION
-c1, c2, c3 = st.columns(3)
+# SOFT SECTION (NO HARD BOXES, JUST CLEAN SPACING)
+c1, c2, c3 = st.columns(3, gap="large")
 
 with c1:
     st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
+    st.caption("To become a skilled and creative developer")
 
 with c2:
     st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
+    st.caption("Building clean and functional web applications")
 
 with c3:
     st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
+    st.caption("Improving Python, UI design, and web development skills")
