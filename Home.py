@@ -43,7 +43,7 @@ with col2:
     left, right = st.columns([1.5, 2.5], gap="large")
 
     with left:
-        st.image("mayie.png", width=280)
+        st.image("mayie.png", width=260)
 
     with right:
         st.markdown("<br>", unsafe_allow_html=True)
