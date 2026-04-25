@@ -2,6 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -11,7 +12,7 @@ st.markdown("""
     font-family: Arial;
 }
 
-/* REMOVE TOP BAR */
+/* HEADER FIX */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
@@ -24,30 +25,34 @@ st.markdown("""
 
 /* TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
+    font-weight: 300;
     color: #000000 !important;
 }
 
-/* HERO TITLE */
-.hero-title {
+/* TITLE */
+.top-title {
     text-align: center;
-    font-size: 42px;
-    font-weight: 800;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
     color: white;
-    margin-bottom: 5px;
 }
 
-.hero-role {
-    text-align: center;
-    font-size: 18px;
-    color: #f2f2f2;
-    margin-bottom: 25px;
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
+}
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+    font-weight: 500;
 }
 
 /* BUTTON */
 div.stButton > button {
     background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
     color: white !important;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 12px 24px;
     border: none;
     font-weight: 700;
@@ -60,87 +65,59 @@ div.stButton > button:hover {
     transition: 0.2s ease-in-out;
 }
 
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.85);
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    margin-top: 20px;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- HERO TITLE ----------------
-st.markdown('<div class="hero-title">Rea May M. Villanueva</div>', unsafe_allow_html=True)
-st.markdown('<div class="hero-role">Aspiring Developer • UI Designer • BS Computer Science</div>', unsafe_allow_html=True)
+# ---------------- TITLE ----------------
+st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- HERO SECTION ----------------
-col1, col2, col3 = st.columns([1, 2, 1])
+# ---------------- SESSION STATE FIX ----------------
+if "hello_clicked" not in st.session_state:
+    st.session_state.hello_clicked = False
+
+# ---------------- PROFILE ----------------
+col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1, 2], gap="large")
+    left, right = st.columns([1.5, 2.5], gap="large")
 
     with left:
-        st.image("mayie.png", width=220)
+        st.image("mayie.png", width=230)
 
-        # ---------------- TOGGLE BUTTON ----------------
-        if "hello_clicked" not in st.session_state:
-            st.session_state.hello_clicked = False
-
+        # TOGGLE BUTTON (FIXED)
         if st.button("🚀 Say Hello"):
             st.session_state.hello_clicked = not st.session_state.hello_clicked
 
         if st.session_state.hello_clicked:
-            st.markdown("""
-            <div style="
-                background: white;
-                padding: 12px;
-                border-radius: 12px;
-                text-align: center;
-                margin-top: 10px;
-                box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-            ">
-                👋 Hello! Welcome to my portfolio
-            </div>
-            """, unsafe_allow_html=True)
+            st.success("👋 Hello! Welcome to my portfolio")
 
     with right:
-        st.markdown("""
-        ### 👋 About Me
+        st.markdown("### Rea May M. Villanueva")
 
-        I am a Computer Science student passionate about building clean, functional, and user-friendly applications.
+        st.write("🎓 BS Computer Science (3rd Year)")
+        st.write("💻 Aspiring Developer & UI Designer")
+        st.write("🌐 Interested in Web Development")
 
-        I enjoy turning ideas into real systems using Python and web development tools.
+        st.write("""
+I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
+
+I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
         """)
 
-# ---------------- QUICK HIGHLIGHTS ----------------
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("---")
 
+# ---------------- INFO ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown("""
-    <div class="card">
-    🎯 Goal<br>
-    Become a skilled developer
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("### 🎯 Goal")
+    st.write("To become a skilled and creative developer")
 
 with c2:
-    st.markdown("""
-    <div class="card">
-    🚀 Focus<br>
-    Clean web applications
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("### 🚀 Focus")
+    st.write("Building clean and functional web applications")
 
 with c3:
-    st.markdown("""
-    <div class="card">
-    🌱 Learning<br>
-    Python • UI Design • Web Dev
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("### 🌱 Learning")
+    st.write("Improving Python, UI design, and web development skills")
