@@ -2,14 +2,14 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE (IMPROVED READABILITY ONLY) ----------------
+# ---------------- STYLE (BOLD TEXT VERSION) ----------------
 st.markdown("""
 <style>
 
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 /* REMOVE TOP BAR */
@@ -17,23 +17,24 @@ st.markdown("""
     background: transparent !important;
 }
 
-/* CONTAINER SPACING */
+/* CONTAINER */
 .block-container {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
 }
 
-/* GLOBAL TEXT (IMPROVED READABILITY) */
+/* GLOBAL TEXT (ALL BOLD) */
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-weight: 700 !important;
 }
 
-/* HEADINGS */
+/* HEADINGS (EXTRA BOLD) */
 h1, h2, h3 {
     color: #000000 !important;
-    font-weight: 700;
+    font-weight: 900 !important;
     letter-spacing: 0.3px;
     margin-bottom: 10px;
 }
@@ -42,7 +43,7 @@ h1, h2, h3 {
 .top-title {
     text-align: center;
     font-size: 38px;
-    font-weight: 800;
+    font-weight: 900;
     color: white;
     margin-bottom: 40px;
 }
@@ -54,7 +55,7 @@ section[data-testid="stSidebar"] {
 
 section[data-testid="stSidebar"] * {
     color: white !important;
-    font-weight: 500;
+    font-weight: 700 !important;
 }
 
 /* BUTTON */
@@ -64,7 +65,7 @@ div.stButton > button {
     border-radius: 20px;
     padding: 10px 18px;
     border: none;
-    font-weight: 700;
+    font-weight: 800 !important;
     width: 100%;
 }
 
@@ -73,18 +74,13 @@ div.stButton > button:hover {
     transition: 0.2s ease-in-out;
 }
 
-/* IMPROVE SPACING BETWEEN ELEMENTS */
-.stMarkdown {
-    margin-bottom: 10px;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- SESSION STATE ----------------
+# ---------------- STATE ----------------
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
