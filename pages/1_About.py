@@ -7,22 +7,9 @@ st.markdown("""
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
     font-family: Arial;
-
-    section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
-section[data-testid="stSidebar"] * {
-    color: white !important;
-    font-weight: 500;
-}
-
-section[data-testid="stSidebar"] div:hover {
-    background-color: rgba(255,255,255,0.15);
-    border-radius: 10px;
-}
-
-/* TEXT COLOR */
+/* MAIN TEXT COLOR (SAFE) */
 html, body, .stApp {
     color: #000000 !important;
 }
@@ -34,7 +21,7 @@ html, body, .stApp {
     margin: auto;
 }
 
-/* CARD STYLE (MATCH HOME FEEL) */
+/* CARD STYLE */
 .card {
     background: rgba(255,255,255,0.80);
     padding: 25px;
@@ -48,20 +35,37 @@ html, body, .stApp {
 h1, h2, h3 {
     text-align: center;
 }
+
+/* SIDEBAR (SAFE FIX) */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
+}
+
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] div {
+    color: white !important;
+    font-weight: 500;
+}
+
+section[data-testid="stSidebar"] div:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
+}
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- TITLE ----------------
 st.title("📘 About Me")
 
-# ---------------- CARD 1 ----------------
+# ---------------- CONTENT ----------------
 st.markdown("""
 <div class="card">
 <p>I enjoy learning programming and building simple applications.</p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- CARD 2 ----------------
 st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
@@ -69,7 +73,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- CARD 3 ----------------
 st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
