@@ -19,21 +19,22 @@ st.markdown("""
 
 /* CONTAINER */
 .block-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 /* TEXT */
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
     font-weight: 700 !important;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* HEADINGS */
 h1, h2, h3 {
     color: #000000 !important;
     font-weight: 900 !important;
+    margin-bottom: 5px;
 }
 
 /* TITLE */
@@ -42,16 +43,16 @@ h1, h2, h3 {
     font-size: 38px;
     font-weight: 900;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* CARD (REDUCED HEIGHT) */
+/* CARD (VERY SMALL HEIGHT) */
 .card {
-    background: rgba(255,255,255,0.88);
-    padding: 14px 18px;   /* 🔥 reduced padding */
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    margin-bottom: 12px;  /* 🔥 less spacing */
+    background: rgba(255,255,255,0.90);
+    padding: 8px 14px;      /* 🔥 very small padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 8px;     /* 🔥 tight spacing */
 }
 
 /* SIDEBAR */
@@ -76,7 +77,7 @@ st.markdown("""
 <div class="card">
 <h3>👩‍💻 Who I Am</h3>
 <p>
-I am Rea May Villanueva, a Computer Science student passionate about building clean and user-friendly web applications using Python and Streamlit.
+Rea May Villanueva — Computer Science student passionate about clean web apps using Python & Streamlit.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -94,7 +95,7 @@ st.markdown("""
 <div class="card">
 <h3>🚀 Developer Mindset</h3>
 <p>
-I focus on simplicity, usability, and clean UI design.
+I value simplicity, usability, and clean UI design.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -103,9 +104,9 @@ st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
 <p>
-✔ Become a full-stack developer<br>
-✔ Improve UI/UX skills<br>
-✔ Build real-world applications
+✔ Full-stack developer<br>
+✔ UI/UX improvement<br>
+✔ Real-world applications
 </p>
 </div>
 """, unsafe_allow_html=True)
