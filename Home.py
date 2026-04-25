@@ -90,7 +90,7 @@ with col2:
             st.session_state.hello_clicked = not st.session_state.hello_clicked
 
         if st.session_state.hello_clicked:
-            st.success("👋 Hello! Welcome to my portfolio")
+            st.success("👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
     with right:
         st.markdown("### Rea May M. Villanueva")
