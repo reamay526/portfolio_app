@@ -98,8 +98,9 @@ with col2:
         st.write("🌐 Interested in Web Development")
 
         st.write("""
-        I enjoy transforming ideas into functional systems using Python and web technologies.
-        I am continuously improving my skills in programming, design, and development.
+       I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
+
+I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
         """)
 
 st.markdown("---")
