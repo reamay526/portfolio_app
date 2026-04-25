@@ -72,21 +72,24 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1.2, 2.8], gap="large")
+with left:
+    st.image("mayie.png", width=220)
 
-    with left:
-        st.image("mayie.png", width=220)
+    btn_col, msg_col = st.columns([1, 2])
 
+    with btn_col:
         if st.button("🚀 Say Hello"):
             st.session_state.hello = not st.session_state.hello
 
+    with msg_col:
         if st.session_state.hello:
-            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
+            st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
 
     with right:
         st.markdown("### Rea May Villanueva")
-        st.write("💻 Aspiring Developer & UI Designer")
+
         st.write("🎓 Computer Science Student (3rd Year)")
+        st.write("💻 Aspiring Developer & UI Designer")
 
         st.write("""
 I build clean and user-friendly web applications using Python and Streamlit.
