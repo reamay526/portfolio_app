@@ -12,13 +12,20 @@ st.markdown("""
     font-family: Arial, sans-serif;
 }
 
-/* HEADER FIX */
+/* REMOVE HEADER SPACE */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
+/* REMOVE EXTRA TOP SPACE */
+[data-testid="stAppViewContainer"] > .main {
+    padding-top: 0rem !important;
+}
+
+/* CONTAINER SPACING */
 .block-container {
-    padding-bottom: 2.5rem;
+    padding-top: 0.5rem !important;
+    padding-bottom: 2rem !important;
 }
 
 /* TEXT */
@@ -28,10 +35,11 @@ html, body, .stApp, p, div, span, label {
 }
 
 /* TITLE */
-h1, h2, h3 {
+h1 {
     text-align: center;
     font-weight: 900 !important;
     color: #000000 !important;
+    margin-top: 0px !important;
 }
 
 /* GLASS CARD */
@@ -48,17 +56,16 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* INPUT STYLE (SOFT GLASS LOOK) */
+/* INPUT STYLE */
 input, textarea {
     border-radius: 10px !important;
     font-weight: 700 !important;
     color: #000000 !important;
 }
 
-/* STREAMLIT INPUT FIX (LESS WHITE) */
+/* SOFT INPUT BACKGROUND */
 .stTextInput input,
 .stTextArea textarea {
-    color: #000000 !important;
     background-color: rgba(255,255,255,0.75) !important;
     border: 1px solid rgba(0,0,0,0.15) !important;
 }
