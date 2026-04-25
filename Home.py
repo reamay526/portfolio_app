@@ -21,6 +21,16 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     margin-bottom: 30px;
 }
 
+/* SIDEBAR VISIBILITY FIX */
+section[data-testid="stSidebar"] {
+    background-color: rgba(255,255,255,0.95);
+    color: black !important;
+}
+
+/* SIDEBAR TEXT */
+section[data-testid="stSidebar"] * {
+    color: black !important;
+
 .stButton > button {
     background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
     color: white !important;
