@@ -5,57 +5,51 @@ st.set_page_config(page_title="Contact", layout="wide")
 st.markdown("""
 <style>
 
-/* FULL BACKGROUND (REMOVE ALL WHITE AREAS) */
+/* FULL BACKGROUND */
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
 }
 
-/* REMOVE TOP WHITE GAP */
+/* REMOVE TOP WHITE SPACE */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-[data-testid="stToolbar"] {
-    background: transparent !important;
-}
-
-/* REMOVE CONTAINER WHITE SPACE */
 .block-container {
     background: transparent !important;
     padding-top: 1rem !important;
-    padding-bottom: 3rem;
     max-width: 900px;
     margin: auto;
 }
 
-/* MAIN TEXT */
-html, body, .stApp {
-    color: #000000 !important;
-}
-
-/* TITLE FIX (IMPORTANT) */
-h1 {
-    color: white !important;
+/* TITLE */
+h1, h2, h3 {
     text-align: center;
-    margin-top: 0px;
+    color: white !important;
 }
 
+/* SMALL + COMPACT CARD */
 .card {
     background: #ffffff;
-    padding: 18px;          /* smaller padding */
-    border-radius: 12px;    /* slightly tighter corners */
+    padding: 12px;
+    border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    margin-bottom: 15px;
+    max-width: 450px;
+    margin: 0 auto 15px auto;
     text-align: center;
-    max-width: 350px;       /* 🔥 makes box smaller */
-    margin-left: auto;
-    margin-right: auto;     /* centers the box */
 }
 
-/* INPUT */
-input, textarea {
+/* INPUTS */
+input {
     border-radius: 10px !important;
-    border: 1px solid #ddd !important;
+    margin-bottom: 8px !important;
+}
+
+/* SMALLER TEXTAREA */
+textarea {
+    border-radius: 10px !important;
+    height: 90px !important;
+    margin-bottom: 8px !important;
 }
 
 /* BUTTON */
@@ -67,10 +61,6 @@ div.stButton > button {
     padding: 10px 20px !important;
     border: none !important;
     width: 100%;
-}
-
-div.stButton > button:hover {
-    transform: scale(1.03);
 }
 
 /* LINKS */
@@ -104,10 +94,10 @@ section[data-testid="stSidebar"] div:hover {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE (NOW INSIDE GRADIENT CLEANLY) ----------------
-st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
+# TITLE
+st.markdown("<h2>📬 Contact Me</h2>", unsafe_allow_html=True)
 
-# ---------------- FORM ----------------
+# FORM CARD
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Name")
@@ -122,7 +112,7 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- LINKS ----------------
+# LINKS CARD
 st.markdown("""
 <div class="card">
 <h3>🌐 Connect With Me</h3>
