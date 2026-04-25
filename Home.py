@@ -84,7 +84,7 @@ with col2:
     left, right = st.columns([1.5, 2.5], gap="large")
 
     with left:
-        st.image("mayie.png", width=250)
+        st.image("mayie.png", width=200)
 
         # ✅ MOVED BUTTON HERE (UNDER IMAGE)
         if st.button("🚀 Say Hello"):
