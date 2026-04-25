@@ -40,14 +40,16 @@ h1 {
     margin-top: 0px;
 }
 
-/* CARD STYLE */
 .card {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    margin-bottom: 20px;
+    padding: 18px;          /* smaller padding */
+    border-radius: 12px;    /* slightly tighter corners */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    margin-bottom: 15px;
     text-align: center;
+    max-width: 500px;       /* 🔥 makes box smaller */
+    margin-left: auto;
+    margin-right: auto;     /* centers the box */
 }
 
 /* INPUT */
