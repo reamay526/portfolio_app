@@ -8,7 +8,7 @@ st.markdown("""
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Bold Arial;
 }
 
 /* REMOVE TOP WHITE GAP */
@@ -23,28 +23,19 @@ st.markdown("""
     padding-bottom: 3rem;
 }
 
-/* GLOBAL TEXT (IMPROVED READABILITY) */
-html, body, .stApp, p, div, span, label {
-    color: #111111 !important;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-/* HEADINGS */
-h1, h2, h3 {
-    color: #ffffff !important;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+/* GLOBAL TEXT */
+html, body, .stApp, p, div, span, label, h1, h2, h3 {
+    font-weight: bold;
+    color: #000000 !important;
 }
 
 /* TITLE */
 .top-title {
     text-align: center;
-    font-size: 40px;
-    font-weight: 800;
+    font-size: 36px;
+    font-weight: bold;
     margin-bottom: 30px;
     color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
 /* SIDEBAR */
@@ -70,22 +61,21 @@ div.stButton > button {
     padding: 12px 24px;
     border: none;
     font-weight: 700;
-    font-size: 15px;
     box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
 }
 
 div.stButton > button:hover {
+    background: linear-gradient(90deg, #00e0ff, #9b2dff) !important;
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
+    box-shadow: 0 8px 22px rgba(0, 198, 255, 0.45);
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- PROFILE ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
@@ -95,27 +85,24 @@ with col2:
     with left:
         st.image("mayie.png", width=230)
 
-        # BUTTON UNDER IMAGE
         if st.button("🚀 Say Hello"):
             st.success("Hello! Welcome to my portfolio 👋")
 
     with right:
         st.markdown("### Rea May M. Villanueva")
-
+        
         st.write("🎓 BS Computer Science (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
         st.write("""
-I am a Computer Science student passionate about building functional and user-friendly digital solutions.  
-I enjoy turning ideas into real applications using Python and web technologies.
-
-I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
+       I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
+       
+       I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
         """)
 
 st.markdown("---")
 
-# ---------------- INFO ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
