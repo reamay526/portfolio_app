@@ -32,9 +32,9 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
 /* TITLE */
 .top-title {
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 25px;
     color: white;
 }
 
@@ -71,7 +71,7 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- SESSION STATE FIX ----------------
+# ---------------- SESSION STATE ----------------
 if "hello_clicked" not in st.session_state:
     st.session_state.hello_clicked = False
 
@@ -85,21 +85,28 @@ with col2:
     with left:
         st.image("mayie.png", width=230)
 
-        # TOGGLE BUTTON (FIXED)
-        if st.button("🚀 Say Hello"):
-            st.session_state.hello_clicked = not st.session_state.hello_clicked
+        # BUTTON + MESSAGE SAME ROW
+        btn_col, msg_col = st.columns([1, 2])
 
-        if st.session_state.hello_clicked:
-            st.success("👋 Hi there! Glad you’re here — feel free to explore my projects.")
+        with btn_col:
+            if st.button("🚀 Say Hello"):
+                st.session_state.hello_clicked = not st.session_state.hello_clicked
+
+        with msg_col:
+            if st.session_state.hello_clicked:
+                st.markdown("👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
     with right:
         st.markdown("### Rea May M. Villanueva")
 
-        st.write("🎓 BS Computer Science (3B)")
+        st.write("🎓 BS Computer Science (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
-        st.write("""Aspiring Computer Science student building clean and user-friendly web applications. """)
+        st.write("""
+I am an aspiring Computer Science student passionate about building clean, functional, and user-friendly web applications.  
+I enjoy turning ideas into real systems using Python and modern web technologies.
+        """)
 
 st.markdown("---")
 
