@@ -6,18 +6,15 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
-/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
-/* REMOVE TOP WHITE SPACE */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* MAIN CONTAINER */
 .block-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -54,7 +51,6 @@ div.stButton > button {
     padding: 10px 18px;
     border: none;
     font-weight: 700;
-    box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
 }
 
 div.stButton > button:hover {
@@ -68,7 +64,7 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- SESSION STATE ----------------
+# ---------------- STATE ----------------
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
@@ -78,47 +74,28 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 with col2:
     left, right = st.columns([1.2, 2.8], gap="large")
 
-    # ---------------- IMAGE + BUTTON ----------------
     with left:
         st.image("mayie.png", width=220)
 
-        btn, msg = st.columns([1 , 1])
+        # BUTTON
+        if st.button("🚀 Say Hello"):
+            st.session_state.hello = not st.session_state.hello
 
-        with btn:
-            if st.button("🚀 Say Hello"):
-                st.session_state.hello = not st.session_state.hello
+        # FIXED OUTPUT (ALWAYS BELOW BUTTON)
+        if st.session_state.hello:
+            st.markdown(
+                "### 👋 Hi there! Glad you’re here — feel free to explore my projects."
+            )
 
-        with msg:
-            if st.session_state.hello:
-                st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
-
-    # ---------------- INFO ----------------
     with right:
         st.markdown("### Rea May M. Villanueva")
-
         st.write("🎓 BS Computer Science (3rd Year)")
-        
         st.write("💻 Aspiring Developer & UI Designer")
-        
         st.write("🌐 Interested in Web Development")
 
         st.write("""
-I am continuously improving my skills in programming, interface design, and system development.
+I am a Computer Science student passionate about building clean and user-friendly digital solutions.  
+I enjoy turning ideas into real applications using Python and web technologies.
         """)
 
 st.markdown("---")
-
-# ---------------- HIGHLIGHTS ----------------
-c1, c2, c3 = st.columns(3)
-
-with c1:
-    st.markdown("### 🎯 Goal")
-    st.write("Become a skilled and creative developer")
-
-with c2:
-    st.markdown("### 🚀 Focus")
-    st.write("Build clean and functional web applications")
-
-with c3:
-    st.markdown("### 🌱 Learning")
-    st.write("Improve Python, UI design, and web development")
