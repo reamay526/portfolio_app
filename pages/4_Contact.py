@@ -21,16 +21,21 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
-/* TITLE (WHITE FOR CONTRAST) */
-h1, h2, h3 {
+/* FORCE ALL TEXT TO BLACK */
+html, body, .stApp, p, div, span, label, h1, h2, h3, input, textarea {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+/* TITLE (still readable on gradient background) */
+h1 {
     text-align: center;
-    color: white !important;
     font-weight: 900 !important;
 }
 
-/* GLASS CARD (IMPROVED VISIBILITY) */
+/* GLASS CARD */
 .card {
-    background: rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 22px;
@@ -42,16 +47,11 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* TEXT INSIDE CARD (FIX VISIBILITY) */
-.card p, .card h3 {
-    color: #111111 !important;
-    font-weight: 800 !important;
-}
-
-/* INPUT STYLE (CLEARER) */
+/* INPUT STYLE */
 input, textarea {
     border-radius: 10px !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
 }
 
 /* BUTTON */
@@ -63,23 +63,17 @@ div.stButton > button {
     padding: 10px 20px !important;
     border: none !important;
     width: 100%;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-div.stButton > button:hover {
-    transform: scale(1.03);
-    transition: 0.2s ease-in-out;
 }
 
 /* LINKS */
 a {
     text-decoration: none;
     font-weight: 800;
-    color: #4b0082;
+    color: #000000;
 }
 
 a:hover {
-    color: #ff0057;
+    color: #333333;
 }
 
 /* SIDEBAR */
@@ -98,7 +92,7 @@ section[data-testid="stSidebar"] * {
 # ---------------- TITLE ----------------
 st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
 
-# ---------------- FORM CARD ----------------
+# ---------------- FORM ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Your Name")
@@ -113,7 +107,7 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS ----------------
+# ---------------- LINKS ----------------
 st.markdown("""
 <div class="card">
 <h3>🌐 Connect With Me</h3>
