@@ -31,13 +31,20 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] * {
     color: black !important;
 
+/* BUTTON PREMIUM LOOK */
 .stButton > button {
     background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
     color: white !important;
     border-radius: 20px;
     padding: 10px 20px;
     border: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
+
+.stButton > button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 
 .block-container {
     padding-top: 3rem;
