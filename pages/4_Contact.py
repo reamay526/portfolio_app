@@ -6,10 +6,15 @@ st.set_page_config(page_title="Contact", layout="wide")
 st.markdown("""
 <style>
 
-/* BACKGROUND */
+/* FULL BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial, sans-serif;
+}
+
+/* REMOVE ALL TOP SPACING */
+[data-testid="stAppViewContainer"] {
+    padding-top: 0rem !important;
 }
 
 /* REMOVE HEADER SPACE */
@@ -17,13 +22,9 @@ st.markdown("""
     background: transparent !important;
 }
 
-[data-testid="stAppViewContainer"] > .main {
-    padding-top: 0rem !important;
-}
-
-/* CONTAINER */
+/* FORCE MAIN CONTAINER TO MOVE UP */
 .block-container {
-    padding-top: 0.5rem !important;
+    padding-top: 0rem !important;
     padding-bottom: 1.5rem !important;
 }
 
@@ -38,9 +39,10 @@ h1 {
     text-align: center;
     font-weight: 900 !important;
     margin-top: 0px !important;
+    margin-bottom: 10px !important;
 }
 
-/* CARD (COMPACT) */
+/* CARD */
 .card {
     background: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(10px);
@@ -114,7 +116,7 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS (SINGLE COLUMN) ----------------
+# ---------------- SOCIAL LINKS ----------------
 st.markdown("""
 <div class="card">
 <h3 style='text-align:center;'>🌐 Connect With Me</h3>
