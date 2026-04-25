@@ -14,8 +14,8 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     color: #000000 !important;
 }
 
-h1{
-    text-align: top center;
+h1 {
+    text-align: top;
 }
  h2, h3 {
     text-align: center;
@@ -39,7 +39,7 @@ with col2:
     left, right = st.columns([1, 2], vertical_alignment="center")
 
     with left:
-        st.image("mayie.png", width=280)
+        st.image("mayie.png", width=330)
 
     with right:
         st.markdown("## 👋 Welcome to My Portfolio")
