@@ -40,17 +40,16 @@ h1 {
     margin-top: 0px !important;
 }
 
-/* COMPACT CARD */
+/* CARD */
 .card {
     background: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(10px);
-    padding: 15px;   /* reduced height */
+    padding: 15px;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     border: 1px solid rgba(255,255,255,0.3);
     max-width: 600px;
     margin: auto;
-    text-align: center;
 }
 
 /* INPUT */
@@ -115,16 +114,24 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS (2 COLUMNS) ----------------
+# ---------------- SOCIAL LINKS ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
-st.markdown("<h3>🌐 Connect With Me</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align:center;'>🌐 Connect With Me</h3>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown('<a href="https://github.com/reamay526" target="_blank">GitHub</a>', unsafe_allow_html=True)
+    st.markdown("""
+    <div style="text-align:left;">
+        <a href="https://github.com/reamay526" target="_blank">GitHub</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown('<a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>', unsafe_allow_html=True)
+    st.markdown("""
+    <div style="text-align:right;">
+        <a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
