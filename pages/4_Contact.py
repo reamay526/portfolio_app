@@ -17,15 +17,14 @@ st.markdown("""
     background: transparent !important;
 }
 
-/* REMOVE EXTRA TOP SPACE */
 [data-testid="stAppViewContainer"] > .main {
     padding-top: 0rem !important;
 }
 
-/* CONTAINER SPACING */
+/* CONTAINER */
 .block-container {
     padding-top: 0.5rem !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 1.5rem !important;
 }
 
 /* TEXT */
@@ -38,43 +37,30 @@ html, body, .stApp, p, div, span, label {
 h1 {
     text-align: center;
     font-weight: 900 !important;
-    color: #000000 !important;
     margin-top: 0px !important;
 }
 
-/* GLASS CARD */
+/* COMPACT CARD */
 .card {
     background: rgba(255, 255, 255, 0.50);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 22px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    max-width: 700px;
+    backdrop-filter: blur(10px);
+    padding: 15px;   /* reduced height */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    max-width: 600px;
     margin: auto;
     text-align: center;
 }
 
-/* INPUT STYLE */
-input, textarea {
-    border-radius: 10px !important;
-    font-weight: 700 !important;
-    color: #000000 !important;
-}
-
-/* SOFT INPUT BACKGROUND */
+/* INPUT */
 .stTextInput input,
 .stTextArea textarea {
     background-color: rgba(255,255,255,0.75) !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
     border: 1px solid rgba(0,0,0,0.15) !important;
-}
-
-/* FOCUS EFFECT */
-.stTextInput input:focus,
-.stTextArea textarea:focus {
-    background-color: rgba(255,255,255,0.9) !important;
-    border: 1px solid #7a00ff !important;
+    font-weight: 700 !important;
 }
 
 /* BUTTON */
@@ -82,15 +68,9 @@ div.stButton > button {
     background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
     color: white !important;
     font-weight: 800 !important;
-    border-radius: 25px !important;
-    padding: 10px 20px !important;
-    border: none !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
     width: 100%;
-}
-
-div.stButton > button:hover {
-    transform: scale(1.03);
-    transition: 0.2s ease-in-out;
 }
 
 /* LINKS */
@@ -135,13 +115,16 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS ----------------
-st.markdown("""
-<div class="card">
-<h3>🌐 Connect With Me</h3>
-<p>
-<a href="https://github.com/reamay526" target="_blank">GitHub</a><br><br>
-<a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>
-</p>
-</div>
-""", unsafe_allow_html=True)
+# ---------------- SOCIAL LINKS (2 COLUMNS) ----------------
+st.markdown('<div class="card">', unsafe_allow_html=True)
+st.markdown("<h3>🌐 Connect With Me</h3>", unsafe_allow_html=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown('<a href="https://github.com/reamay526" target="_blank">GitHub</a>', unsafe_allow_html=True)
+
+with col2:
+    st.markdown('<a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>', unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
