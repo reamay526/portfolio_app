@@ -27,7 +27,7 @@ st.markdown("""
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
     font-weight: 700 !important;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* HEADINGS */
@@ -46,13 +46,16 @@ h1, h2, h3 {
     margin-bottom: 25px;
 }
 
-/* CARD (VERY SMALL HEIGHT) */
+/* ⭐ GLASSMORPHISM CARD (TRANSPARENT + BLENDABLE) */
 .card {
-    background: rgba(255,255,255,0.90);
-    padding: 8px 14px;      /* 🔥 very small padding */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    margin-bottom: 8px;     /* 🔥 tight spacing */
+    background: rgba(255, 255, 255, 0.35);  /* 🔥 transparency */
+    backdrop-filter: blur(8px);             /* 🔥 glass effect */
+    -webkit-backdrop-filter: blur(8px);
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* SIDEBAR */
@@ -77,7 +80,7 @@ st.markdown("""
 <div class="card">
 <h3>👩‍💻 Who I Am</h3>
 <p>
-Rea May Villanueva — Computer Science student passionate about clean web apps using Python & Streamlit.
+Rea May Villanueva — Computer Science student passionate about building clean and user-friendly web applications using Python and Streamlit.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -95,7 +98,7 @@ st.markdown("""
 <div class="card">
 <h3>🚀 Developer Mindset</h3>
 <p>
-I value simplicity, usability, and clean UI design.
+I focus on simplicity, usability, and clean UI design.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -104,9 +107,9 @@ st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
 <p>
-✔ Full-stack developer<br>
-✔ UI/UX improvement<br>
-✔ Real-world applications
+✔ Become a full-stack developer<br>
+✔ Improve UI/UX skills<br>
+✔ Build real-world applications
 </p>
 </div>
 """, unsafe_allow_html=True)
