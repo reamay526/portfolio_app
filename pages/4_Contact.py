@@ -21,41 +21,49 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
-/* TITLE */
+/* TITLE (WHITE FOR CONTRAST) */
 h1, h2, h3 {
     text-align: center;
-    color: black !important;
+    color: white !important;
     font-weight: 900 !important;
 }
 
-/* GLASS CARD */
+/* GLASS CARD (IMPROVED VISIBILITY) */
 .card {
-    background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 22px;
     border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     max-width: 700px;
     margin: auto;
     text-align: center;
 }
 
-/* INPUT STYLE */
+/* TEXT INSIDE CARD (FIX VISIBILITY) */
+.card p, .card h3 {
+    color: #111111 !important;
+    font-weight: 800 !important;
+}
+
+/* INPUT STYLE (CLEARER) */
 input, textarea {
     border-radius: 10px !important;
+    font-weight: 600 !important;
 }
 
 /* BUTTON */
 div.stButton > button {
     background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
     color: white !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     border-radius: 25px !important;
     padding: 10px 20px !important;
     border: none !important;
     width: 100%;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 div.stButton > button:hover {
@@ -66,8 +74,8 @@ div.stButton > button:hover {
 /* LINKS */
 a {
     text-decoration: none;
-    font-weight: bold;
-    color: #7a00ff;
+    font-weight: 800;
+    color: #4b0082;
 }
 
 a:hover {
