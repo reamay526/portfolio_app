@@ -2,27 +2,40 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE (UNCHANGED DESIGN) ----------------
+# ---------------- STYLE (IMPROVED READABILITY ONLY) ----------------
 st.markdown("""
 <style>
 
+/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Arial;
+    font-family: 'Arial', sans-serif;
 }
 
+/* REMOVE TOP BAR */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
+/* CONTAINER SPACING */
 .block-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
 }
 
-/* TEXT */
-html, body, .stApp, p, div, span, label, h1, h2, h3 {
+/* GLOBAL TEXT (IMPROVED READABILITY) */
+html, body, .stApp, p, div, span, label {
+    color: #111111 !important;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
     color: #000000 !important;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
 }
 
 /* TITLE */
@@ -31,7 +44,7 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     font-size: 38px;
     font-weight: 800;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 /* SIDEBAR */
@@ -41,6 +54,7 @@ section[data-testid="stSidebar"] {
 
 section[data-testid="stSidebar"] * {
     color: white !important;
+    font-weight: 500;
 }
 
 /* BUTTON */
@@ -51,11 +65,17 @@ div.stButton > button {
     padding: 10px 18px;
     border: none;
     font-weight: 700;
+    width: 100%;
 }
 
 div.stButton > button:hover {
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
+}
+
+/* IMPROVE SPACING BETWEEN ELEMENTS */
+.stMarkdown {
+    margin-bottom: 10px;
 }
 
 </style>
@@ -68,14 +88,14 @@ st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
-# ---------------- HERO SECTION ----------------
+# ---------------- HERO ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
     left, right = st.columns([1.2, 2.8], gap="large")
 
-    # ---------------- LEFT (IMAGE + BUTTON) ----------------
+    # LEFT SIDE
     with left:
         st.image("mayie.png", width=220)
 
@@ -85,10 +105,9 @@ with col2:
         if st.session_state.hello:
             st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-    # ---------------- RIGHT (ONLY CORE INFO) ----------------
+    # RIGHT SIDE
     with right:
         st.markdown("### Rea May Villanueva")
-
         st.write("🎓 Computer Science Student (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
 
@@ -96,7 +115,7 @@ with col2:
 I build clean and user-friendly web applications using Python and Streamlit.
         """)
 
-# ---------------- CLEAN FOOTER HIGHLIGHT (MINIMAL ONLY) ----------------
+# ---------------- FOOTER ----------------
 st.markdown("---")
 
 c1, c2, c3 = st.columns(3)
