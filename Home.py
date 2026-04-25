@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -72,43 +71,40 @@ if "hello" not in st.session_state:
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
+
     left, right = st.columns([1.2, 2.8], gap="large")
 
     with left:
         st.image("mayie.png", width=220)
 
-        # BUTTON
         if st.button("🚀 Say Hello"):
             st.session_state.hello = not st.session_state.hello
 
-        # MESSAGE
         if st.session_state.hello:
-            st.markdown("### 👋 Hi there! Glad you’re here — feel free to explore my projects.")
+            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
     with right:
-        st.markdown("### Rea May M. Villanueva")
-        st.write("🎓 BS Computer Science (3rd Year)")
+        st.markdown("### Rea May Villanueva")
         st.write("💻 Aspiring Developer & UI Designer")
-        st.write("🌐 Interested in Web Development")
+        st.write("🎓 Computer Science Student (3rd Year)")
 
         st.write("""
-I am a Computer Science student passionate about building clean and user-friendly digital solutions.  
-I enjoy turning ideas into real applications using Python and web technologies.
+I build clean and user-friendly web applications using Python and Streamlit.
         """)
 
 st.markdown("---")
 
-# ---------------- GOALS / HIGHLIGHTS ----------------
+# ---------------- QUICK HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
     st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
+    st.write("Become a skilled developer")
 
 with c2:
     st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
+    st.write("Web apps & UI design")
 
 with c3:
     st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
+    st.write("Python • Streamlit • UI/UX")
