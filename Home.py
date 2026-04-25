@@ -13,12 +13,12 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     color: #000000 !important;
 }
 
-section[data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.95);
-}
-
-section[data-testid="stSidebar"] * {
-    color: black !important;
+/* CENTER TITLE */
+.top-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .stButton > button {
@@ -30,11 +30,13 @@ section[data-testid="stSidebar"] * {
 }
 
 .block-container {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
@@ -43,11 +45,9 @@ with col2:
     left, right = st.columns([1.5, 2.5], gap="large")
 
     with left:
-        st.image("mayie.png", width=260)
+        st.image("mayie.png", width=280)
 
     with right:
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.markdown("## 👋 Welcome to My Portfolio")
         st.markdown("### Rea May M. Villanueva")
 
         st.write("🎓 BSCS 3B")
