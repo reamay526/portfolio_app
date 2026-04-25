@@ -2,40 +2,65 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Bold Arial;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* REMOVE TOP WHITE GAP */
+/* REMOVE TOP BAR */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
 /* CONTAINER */
 .block-container {
-    background: transparent !important;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    max-width: 950px;
+    margin: auto;
 }
 
-/* GLOBAL TEXT */
-html, body, .stApp, p, div, span, label, h1, h2, h3 {
-    font-weight: bold;
-    color: #000000 !important;
+/* TEXT */
+html, body, .stApp, p, div, span, label {
+    color: #111 !important;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-/* TITLE */
-.top-title {
+/* HEADINGS */
+h1, h2, h3 {
+    color: white !important;
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: white;
+    font-weight: 700;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.92);
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* BUTTON */
+div.stButton > button {
+    background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
+    color: white !important;
+    border-radius: 25px;
+    padding: 12px 24px;
+    border: none;
+    font-weight: 700;
+}
+
+div.stButton > button:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
 }
 
 /* SIDEBAR */
@@ -53,66 +78,60 @@ section[data-testid="stSidebar"] div:hover {
     border-radius: 10px;
 }
 
-/* BUTTON */
-div.stButton > button {
-    background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
-    color: white !important;
-    border-radius: 20px;
-    padding: 12px 24px;
-    border: none;
-    font-weight: 700;
-    box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
-}
-
-div.stButton > button:hover {
-    background: linear-gradient(90deg, #00e0ff, #9b2dff) !important;
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 8px 22px rgba(0, 198, 255, 0.45);
-}
-
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
+# ---------------- HERO TITLE ----------------
+st.markdown("<h1>👋 Hi, I'm Rea May</h1>", unsafe_allow_html=True)
+st.markdown("<h3>💻 Aspiring Developer | UI Designer | CS Student</h3>", unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([0.5, 3, 0.5])
+st.write("")
+
+# ---------------- HERO SECTION ----------------
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    st.image("mayie.png", width=240)
+
+    if st.button("🚀 Say Hello"):
+        st.success("Thanks for visiting my portfolio 👋")
 
 with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>Short Intro</h3>
+    <p>
+    I am a Computer Science student passionate about building clean and functional web applications.
+    I enjoy turning ideas into real digital systems using Python and web technologies.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    left, right = st.columns([1.5, 2.5], gap="large")
-
-    with left:
-        st.image("mayie.png", width=230)
-
-        if st.button("🚀 Say Hello"):
-            st.success("Hello! Welcome to my portfolio 👋")
-
-    with right:
-        st.markdown("### Rea May M. Villanueva")
-        
-        st.write("🎓 BS Computer Science (3rd Year)")
-        st.write("💻 Aspiring Developer & UI Designer")
-        st.write("🌐 Interested in Web Development")
-
-        st.write("""
-       I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
-       
-       I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
-        """)
-
+# ---------------- QUICK HIGHLIGHTS ----------------
 st.markdown("---")
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
+    st.markdown("""
+    <div class="card">
+    <h3>🎯 Goal</h3>
+    <p>Become a skilled developer</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 with c2:
-    st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
+    st.markdown("""
+    <div class="card">
+    <h3>🚀 Focus</h3>
+    <p>Web development & UI design</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 with c3:
-    st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
+    st.markdown("""
+    <div class="card">
+    <h3>🌱 Learning</h3>
+    <p>Python • Streamlit • Frontend</p>
+    </div>
+    """, unsafe_allow_html=True)
