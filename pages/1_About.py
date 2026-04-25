@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="wide")
 
-# ---------------- STYLE (SAME DESIGN SYSTEM) ----------------
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -19,15 +19,15 @@ st.markdown("""
 
 /* CONTAINER */
 .block-container {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* TEXT */
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
     font-weight: 700 !important;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* HEADINGS */
@@ -42,16 +42,16 @@ h1, h2, h3 {
     font-size: 38px;
     font-weight: 900;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* CARD */
+/* CARD (REDUCED HEIGHT) */
 .card {
-    background: rgba(255,255,255,0.85);
-    padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    margin-bottom: 18px;
+    background: rgba(255,255,255,0.88);
+    padding: 14px 18px;   /* 🔥 reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    margin-bottom: 12px;  /* 🔥 less spacing */
 }
 
 /* SIDEBAR */
@@ -71,12 +71,12 @@ section[data-testid="stSidebar"] * {
 st.markdown('<div class="top-title">📘 About Me</div>', unsafe_allow_html=True)
 
 # ---------------- CONTENT ----------------
+
 st.markdown("""
 <div class="card">
 <h3>👩‍💻 Who I Am</h3>
 <p>
-I am Rea May Villanueva, a Computer Science student passionate about building clean, functional, and user-friendly web applications.
-I enjoy turning ideas into real systems using Python and Streamlit.
+I am Rea May Villanueva, a Computer Science student passionate about building clean and user-friendly web applications using Python and Streamlit.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -85,7 +85,7 @@ st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
 <p>
-Bachelor of Science in Computer Science (3rd Year)
+BS Computer Science (3rd Year)
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -94,7 +94,7 @@ st.markdown("""
 <div class="card">
 <h3>🚀 Developer Mindset</h3>
 <p>
-I focus on simplicity, usability, and clean UI design. I believe good software should not only work — it should feel easy to use.
+I focus on simplicity, usability, and clean UI design.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -104,8 +104,8 @@ st.markdown("""
 <h3>🎯 Goals</h3>
 <p>
 ✔ Become a full-stack developer<br>
-✔ Improve UI/UX design skills<br>
-✔ Build real-world web applications
+✔ Improve UI/UX skills<br>
+✔ Build real-world applications
 </p>
 </div>
 """, unsafe_allow_html=True)
