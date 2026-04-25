@@ -8,6 +8,11 @@ st.markdown("""
 
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
+    font-family: Arial, sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
 }
 
 .block-container {
@@ -15,7 +20,20 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
-/* Title */
+/* TEXT */
+html, body, .stApp, p, div, span, label {
+    color: #111111 !important;
+    font-weight: 700 !important;
+    line-height: 1.6;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    color: #000000 !important;
+    font-weight: 900 !important;
+}
+
+/* TITLE */
 .top-title {
     text-align: center;
     font-size: 38px;
@@ -24,23 +42,26 @@ st.markdown("""
     margin-bottom: 25px;
 }
 
-/* Card */
+/* GLASS CARD (SOFTER + CLEANER) */
 .card {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(10px);
-    padding: 16px;
+    -webkit-backdrop-filter: blur(10px);
+    padding: 14px 18px;
     border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
     margin-bottom: 15px;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* Sidebar */
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
 section[data-testid="stSidebar"] * {
     color: white !important;
+    font-weight: 700 !important;
 }
 
 </style>
@@ -54,8 +75,9 @@ st.markdown("""
 <div class="card">
 <h3>👩‍💻 Profile</h3>
 <p>
-BS Computer Science student (3B) at DEBESMSCAT.
-Passionate about building clean, functional, and user-friendly web applications.
+I am a BS Computer Science student (3B) at DEBESMSCAT.
+I am passionate about software development and creating clean, functional, and user-friendly web applications.
+I enjoy turning ideas into real digital solutions using modern technologies.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -64,17 +86,21 @@ Passionate about building clean, functional, and user-friendly web applications.
 st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
-<p>Bachelor of Science in Computer Science</p>
-<p>3rd Year – Section 3B</p>
-<p>DEBESMSCAT</p>
+<p>
+Bachelor of Science in Computer Science<br>
+3rd Year – Section 3B<br>
+DEBESMSCAT
+</p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- SKILLS ----------------
+# ---------------- SKILLS SUMMARY ----------------
 st.markdown("""
 <div class="card">
-<h3>💻 Skills</h3>
-<p>HTML • CSS • Python • Java • Git • Streamlit</p>
+<h3>💻 Technical Background</h3>
+<p>
+HTML • CSS • Python • Java • GitHub • VS Code • Streamlit
+</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -82,31 +108,22 @@ st.markdown("""
 st.markdown("""
 <div class="card">
 <h3>🚀 Interests</h3>
-<p>Web development, UI/UX design, and interactive applications.</p>
+<p>
+Focused on web development, UI/UX design, and building interactive applications.
+I enjoy learning how systems work and how to improve user experience through clean design.
+</p>
 </div>
 """, unsafe_allow_html=True)
-
-# ---------------- INTERACTIVE SECTION (FIX FOR REQUIREMENT) ----------------
-st.markdown("## 🎯 Quick Interaction")
-
-focus = st.selectbox(
-    "What do you want to know about me?",
-    ["Skills", "Goals", "Projects Interest"]
-)
-
-if focus == "Skills":
-    st.info("I focus on Python, Streamlit, and frontend basics.")
-elif focus == "Goals":
-    st.success("My goal is to become a full-stack developer.")
-else:
-    st.warning("I aim to build real-world applications and portfolios.")
 
 # ---------------- GOALS ----------------
 st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
-<p>✔ Become a full-stack developer<br>
-✔ Improve UI/UX design skills<br>
-✔ Build real-world applications</p>
+<p>
+✔ Become a professional full-stack developer<br>
+✔ Improve UI/UX and web development skills<br>
+✔ Build real-world and impactful applications<br>
+✔ Strengthen problem-solving and programming skills
+</p>
 </div>
 """, unsafe_allow_html=True)
