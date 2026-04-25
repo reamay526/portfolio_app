@@ -2,6 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -50,6 +51,7 @@ div.stButton > button {
     padding: 10px 18px;
     border: none;
     font-weight: 700;
+    width: 100%;
 }
 
 div.stButton > button:hover {
@@ -72,32 +74,37 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-with left:
-    st.image("mayie.png", width=220)
+    left, right = st.columns([1.2, 2.8], gap="large")
 
-    btn_col, msg_col = st.columns([1, 2])
+    # ---------------- LEFT SIDE ----------------
+    with left:
+        st.image("mayie.png", width=220)
 
-    with btn_col:
-        if st.button("🚀 Say Hello"):
-            st.session_state.hello = not st.session_state.hello
+        # ✔ BUTTON + MESSAGE INLINE (SIDE BY SIDE)
+        btn_col, msg_col = st.columns([1, 2])
 
-    with msg_col:
-        if st.session_state.hello:
-            st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
+        with btn_col:
+            if st.button("🚀 Say Hello"):
+                st.session_state.hello = not st.session_state.hello
 
+        with msg_col:
+            if st.session_state.hello:
+                st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
+
+    # ---------------- RIGHT SIDE ----------------
     with right:
         st.markdown("### Rea May Villanueva")
-
-        st.write("🎓 Computer Science Student (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
+        st.write("🎓 Computer Science Student (3rd Year)")
 
         st.write("""
 I build clean and user-friendly web applications using Python and Streamlit.
+I enjoy turning ideas into real working systems.
         """)
 
 st.markdown("---")
 
-# ---------------- QUICK HIGHLIGHTS ----------------
+# ---------------- HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
