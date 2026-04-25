@@ -87,14 +87,18 @@ with col2:
         st.image("mayie.png", width=250)
 
     with right:
-        st.markdown("### Rea May M. Villanueva")
+st.markdown("### Rea May M. Villanueva")
+st.write("🎓 BS Computer Science Student (3rd Year)")
+st.write("💻 Aspiring Full-Stack Developer & UI Designer")
+st.write("🌐 Passionate about building clean, user-friendly web applications")
 
-        st.write("🎓 BSCS 3B")
-        st.write("💻 Aspiring Developer & Designer")
-        st.write("🌐 Interested in Web Development")
+st.write("""
+I am currently improving my skills in Python, web development, and UI design.  
+I enjoy turning ideas into functional and visually appealing applications.
+""")
 
-        if st.button("🚀 Say Hello"):
-            st.success("Hello! Thanks for visiting my portfolio 👋")
+if st.button("🚀 Say Hello"):
+    st.success("Hello! Welcome to my portfolio — feel free to explore my work 👋") 
 
 st.markdown("---")
 
