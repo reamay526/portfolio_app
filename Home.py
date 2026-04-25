@@ -6,18 +6,15 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
-/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
-/* HEADER FIX */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* CONTAINER */
 .block-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -71,7 +68,7 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- SESSION STATE ----------------
+# ---------------- STATE ----------------
 if "hello_clicked" not in st.session_state:
     st.session_state.hello_clicked = False
 
@@ -85,14 +82,14 @@ with col2:
     with left:
         st.image("mayie.png", width=230)
 
-        # BUTTON + MESSAGE SAME ROW
-        btn_col, msg_col = st.columns([1, 2])
+        # 🔥 STRAIGHT LINE LAYOUT (BUTTON + MESSAGE)
+        b1, b2, b3 = st.columns([1, 2, 2])
 
-        with btn_col:
+        with b1:
             if st.button("🚀 Say Hello"):
                 st.session_state.hello_clicked = not st.session_state.hello_clicked
 
-        with msg_col:
+        with b2:
             if st.session_state.hello_clicked:
                 st.markdown("👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
