@@ -88,14 +88,19 @@ with col2:
 
     with right:
         st.markdown("### Rea May M. Villanueva")
-
-        st.write("🎓 BSCS 3B")
-        st.write("💻 Aspiring Developer & Designer")
+        
+        st.write("🎓 BS Computer Science (3rd Year)")
+        st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
-        if st.button("🚀 Say Hello"):
-            st.success("Hello! Thanks for visiting my portfolio 👋")
+        st.write("""
+        I enjoy transforming ideas into functional systems using Python and web technologies.
+        I am continuously improving my skills in programming, design, and development.
+        """)
 
+        if st.button("🚀 Say Hello"):
+            st.success("Hello! Welcome to my portfolio 👋")
+            
 st.markdown("---")
 
 # ---------------- INFO ----------------
