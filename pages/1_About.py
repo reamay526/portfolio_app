@@ -5,7 +5,7 @@ st.set_page_config(page_title="About", layout="wide")
 st.markdown("""
 <style>
 
-/* BACKGROUND FIX (CONSISTENT DESIGN) */
+/* BACKGROUND FIX */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
@@ -16,7 +16,7 @@ st.markdown("""
     background: transparent !important;
 }
 
-/* REMOVE CONTAINER WHITE BACKGROUND */
+/* CONTAINER */
 .block-container {
     background: transparent !important;
     padding-top: 3rem;
@@ -24,14 +24,14 @@ st.markdown("""
     margin: auto;
 }
 
-/* MAIN TEXT */
+/* TEXT */
 html, body, .stApp {
     color: #000000 !important;
 }
 
 /* CARD STYLE */
 .card {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.88);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
@@ -49,10 +49,7 @@ section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
-section[data-testid="stSidebar"] p,
-section[data-testid="stSidebar"] span,
-section[data-testid="stSidebar"] label,
-section[data-testid="stSidebar"] div {
+section[data-testid="stSidebar"] * {
     color: white !important;
     font-weight: 500;
 }
@@ -68,25 +65,62 @@ section[data-testid="stSidebar"] div:hover {
 # ---------------- TITLE ----------------
 st.title("📘 About Me")
 
-# ---------------- CONTENT ----------------
+# ---------------- INTRO CARD ----------------
 st.markdown("""
 <div class="card">
-<p>I enjoy learning programming and building simple applications.</p>
+<h3>👋 Hello, I'm Rea May</h3>
+<p>
+A passionate Computer Science student who enjoys building clean, functional, and user-friendly applications.
+I love turning ideas into real systems using code and creativity.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
+# ---------------- EDUCATION ----------------
 st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
-<p>BS Computer Science</p>
+<p>
+Bachelor of Science in Computer Science<br>
+3rd Year College Student<br><br>
+Focused on software development, web technologies, and UI/UX design.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
+# ---------------- SKILLS SNAPSHOT ----------------
+st.markdown("""
+<div class="card">
+<h3>💡 What I Do</h3>
+<p>
+✔ Build web applications using Python & Streamlit<br>
+✔ Design simple and clean user interfaces<br>
+✔ Practice front-end development (HTML/CSS)<br>
+✔ Develop school and personal projects
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- GOALS ----------------
 st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
-<p>✔ Improve coding skills<br>
-✔ Build useful projects<br>
-✔ Become a full-stack developer</p>
+<p>
+✔ Become a full-stack developer<br>
+✔ Improve UI/UX design skills<br>
+✔ Build real-world applications<br>
+✔ Gain internship experience in tech industry
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- PERSONALITY / BIO ----------------
+st.markdown("""
+<div class="card">
+<h3>🚀 Developer Mindset</h3>
+<p>
+I believe in continuous learning and improvement.
+Every project I build helps me grow my skills in problem-solving, creativity, and logic.
+</p>
 </div>
 """, unsafe_allow_html=True)
