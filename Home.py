@@ -31,12 +31,18 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] * {
     color: black !important;
 
+/* BUTTON STYLE FIX */
 .stButton > button {
     background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
-    color: white !important;
+    color: #ffffff !important;
     border-radius: 20px;
     padding: 10px 20px;
     border: none;
+}
+
+.stButton > button:hover {
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 .block-container {
