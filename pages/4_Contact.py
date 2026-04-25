@@ -40,7 +40,7 @@ h1 {
     margin-top: 0px !important;
 }
 
-/* CARD */
+/* CARD (COMPACT) */
 .card {
     background: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(10px);
@@ -52,7 +52,7 @@ h1 {
     margin: auto;
 }
 
-/* INPUT */
+/* INPUTS */
 .stTextInput input,
 .stTextArea textarea {
     background-color: rgba(255,255,255,0.75) !important;
@@ -114,22 +114,22 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS ----------------
+# ---------------- SOCIAL LINKS (FIXED GAP) ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align:center;'>🌐 Connect With Me</h3>", unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1, 1], gap="small")
 
 with col1:
     st.markdown("""
-    <div style="text-align:left;">
+    <div style="text-align:center;">
         <a href="https://github.com/reamay526" target="_blank">GitHub</a>
     </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    <div style="text-align:right;">
+    <div style="text-align:center;">
         <a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>
     </div>
     """, unsafe_allow_html=True)
