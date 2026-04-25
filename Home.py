@@ -15,9 +15,21 @@ st.markdown("""
     background: transparent !important;
 }
 
+/* 🔥 FIX SPACING */
 .block-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem !important;
+    padding-bottom: 0rem !important;
+}
+
+/* REMOVE EXTRA SPACE BETWEEN SECTIONS */
+hr {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* REMOVE COLUMN PADDING (CAUSE OF GAP) */
+div[data-testid="column"] {
+    padding: 0 !important;
 }
 
 /* TEXT */
@@ -31,7 +43,7 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     font-size: 38px;
     font-weight: 800;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 /* SIDEBAR */
@@ -74,13 +86,12 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1.2, 2.8], gap="large")
+    left, right = st.columns([1.2, 2.8], gap="small")
 
-    # ---------------- LEFT SIDE ----------------
+    # LEFT SIDE
     with left:
         st.image("mayie.png", width=220)
 
-        # ✔ BUTTON + MESSAGE INLINE (SIDE BY SIDE)
         btn_col, msg_col = st.columns([1, 2])
 
         with btn_col:
@@ -91,7 +102,7 @@ with col2:
             if st.session_state.hello:
                 st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-    # ---------------- RIGHT SIDE ----------------
+    # RIGHT SIDE
     with right:
         st.markdown("### Rea May Villanueva")
         st.write("💻 Aspiring Developer & UI Designer")
@@ -102,7 +113,8 @@ I build clean and user-friendly web applications using Python and Streamlit.
 I enjoy turning ideas into real working systems.
         """)
 
-st.markdown("---")
+# 🔥 CLEAN DIVIDER (LESS SPACE)
+st.markdown("<hr style='margin:10px 0;'>", unsafe_allow_html=True)
 
 # ---------------- HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
