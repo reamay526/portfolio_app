@@ -74,11 +74,11 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1.2, 2.8], gap="large")
+    left, right = st.columns([1.0, 2.8], gap="large")
 
     # ---------------- LEFT (IMAGE + BUTTON) ----------------
     with left:
-        st.image("mayie.png", width=220)
+        st.image("mayie.png", width=200)
 
         if st.button("🚀 Say Hello"):
             st.session_state.hello = not st.session_state.hello
