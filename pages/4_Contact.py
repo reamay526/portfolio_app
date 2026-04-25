@@ -6,38 +6,94 @@ st.set_page_config(page_title="Contact", layout="wide")
 st.markdown("""
 <style>
 
+/* FULL BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
+    font-family: Arial, sans-serif;
 }
 
+/* REMOVE TOP SPACE */
+[data-testid="stAppViewContainer"] {
+    padding-top: 0rem !important;
+}
+
+/* HEADER FIX */
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+/* CONTAINER */
 .block-container {
-    padding-top: 1rem;
+    padding-top: 0rem !important;
+    padding-bottom: 1.5rem !important;
 }
 
+/* TEXT */
+html, body, .stApp, p, div, span, label {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+/* TITLE */
 h1 {
     text-align: center;
-    color: white !important;
-    font-weight: 900;
+    font-weight: 900 !important;
+    margin-top: 0px !important;
+    margin-bottom: 8px !important;
 }
 
-/* Card */
+/* GLASS CARD */
 .card {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 15px;
     border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
     max-width: 600px;
-    margin: auto;
-    margin-bottom: 15px;
-    text-align: center;
+    margin: 0 auto 15px auto;
 }
 
-/* Sidebar */
+/* INPUTS */
+.stTextInput input,
+.stTextArea textarea {
+    background-color: rgba(255,255,255,0.75) !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    font-weight: 700 !important;
+}
+
+/* BUTTON */
+div.stButton > button {
+    background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
+    color: white !important;
+    font-weight: 800 !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    width: 100%;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    font-weight: 800;
+    color: #4b0082 !important;
+}
+
+a:hover {
+    color: #ff0057 !important;
+}
+
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
 section[data-testid="stSidebar"] * {
     color: white !important;
+    font-weight: 700 !important;
 }
 
 </style>
@@ -46,31 +102,30 @@ section[data-testid="stSidebar"] * {
 # ---------------- TITLE ----------------
 st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
 
-# ---------------- FORM (STRICT VERSION) ----------------
-with st.container():
-    name = st.text_input("Your Name")
-    email = st.text_input("Your Email")
-    message = st.text_area("Your Message")
+# ---------------- FORM CARD ----------------
+st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    if st.button("🚀 Send Message"):
-        if name.strip() and email.strip() and message.strip():
+name = st.text_input("Your Name")
+email = st.text_input("Your Email")
+message = st.text_area("Your Message")
 
-            # simple format check (basic compliance upgrade)
-            if "@" in email:
-                st.success("Message sent successfully 🚀")
-                st.info(f"Preview: {name} ({email}) sent a message.")
-            else:
-                st.error("Please enter a valid email address.")
-        else:
-            st.error("All fields are required.")
+if st.button("🚀 Send Message"):
+    if name and email and message:
+        st.success("Message sent successfully 🚀")
+    else:
+        st.error("Please fill in all fields")
 
-# ---------------- SOCIAL LINKS ----------------
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------- SOCIAL LINKS CARD ----------------
 st.markdown("""
 <div class="card">
-<h3>🌐 Connect With Me</h3>
-<p>
-<a href="https://github.com/reamay526" target="_blank">GitHub</a><br>
-<a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>
-</p>
+<h3 style="text-align:center;">🌐 Connect With Me</h3>
+
+<div style="text-align:center; line-height:2;">
+    <a href="https://github.com/reamay526" target="_blank">GitHub</a><br><br>
+    <a href="https://www.facebook.com/rea.villanueva.9277" target="_blank">Facebook</a>
+</div>
+
 </div>
 """, unsafe_allow_html=True)
