@@ -21,8 +21,8 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
-/* TEXT (BLACK FOR READABILITY) */
-html, body, .stApp, p, div, span, label, input, textarea {
+/* TEXT */
+html, body, .stApp, p, div, span, label {
     color: #000000 !important;
     font-weight: 700 !important;
 }
@@ -48,10 +48,18 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* INPUT STYLE */
+/* INPUT STYLE (FIXED TEXT COLOR) */
 input, textarea {
     border-radius: 10px !important;
     font-weight: 700 !important;
+    color: #000000 !important;
+}
+
+/* STREAMLIT INPUT FIX */
+.stTextInput input,
+.stTextArea textarea {
+    color: #000000 !important;
+    background-color: rgba(255,255,255,0.95) !important;
 }
 
 /* BUTTON */
@@ -70,15 +78,15 @@ div.stButton > button:hover {
     transition: 0.2s ease-in-out;
 }
 
-/* LINKS (UPDATED COLOR) */
+/* LINKS */
 a {
     text-decoration: none;
     font-weight: 800;
-    color: #4b0082 !important;   /* deep purple */
+    color: #4b0082 !important;
 }
 
 a:hover {
-    color: #ff0057 !important;   /* pink hover */
+    color: #ff0057 !important;
 }
 
 /* SIDEBAR */
