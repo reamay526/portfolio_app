@@ -6,15 +6,18 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
+/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
+/* HEADER FIX */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
+/* CONTAINER */
 .block-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -22,16 +25,15 @@ st.markdown("""
 
 /* TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
-    font-weight: 500;
     color: #000000 !important;
 }
 
 /* TITLE */
 .top-title {
     text-align: center;
-    font-size: 38px;
-    font-weight: 800;
-    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
     color: white;
 }
 
@@ -42,7 +44,6 @@ section[data-testid="stSidebar"] {
 
 section[data-testid="stSidebar"] * {
     color: white !important;
-    font-weight: 500;
 }
 
 /* BUTTON */
@@ -50,11 +51,10 @@ div.stButton > button {
     background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
     color: white !important;
     border-radius: 20px;
-    padding: 12px 24px;
+    padding: 10px 18px;
     border: none;
     font-weight: 700;
     box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
-    width: 100%;
 }
 
 div.stButton > button:hover {
@@ -68,42 +68,37 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- STATE ----------------
-if "hello_clicked" not in st.session_state:
-    st.session_state.hello_clicked = False
+# ---------------- SESSION STATE ----------------
+if "hello" not in st.session_state:
+    st.session_state.hello = False
 
 # ---------------- PROFILE ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
-
     left, right = st.columns([1.5, 2.5], gap="large")
 
     with left:
         st.image("mayie.png", width=230)
 
-        # 🔥 STRAIGHT LINE LAYOUT (BUTTON + MESSAGE)
-        b1, b2, b3 = st.columns([1, 2, 2])
-
-        with b1:
-            if st.button("🚀 Say Hello"):
-                st.session_state.hello_clicked = not st.session_state.hello_clicked
-
-        with b2:
-            if st.session_state.hello_clicked:
-                st.markdown("👋 Hi there! Glad you’re here — feel free to explore my projects.")
-
     with right:
         st.markdown("### Rea May M. Villanueva")
-
-        st.write("🎓 BS Computer Science (3rd Year)")
+        st.write("🎓 BS Computer Science (3B)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
-        st.write("""
-I am an aspiring Computer Science student passionate about building clean, functional, and user-friendly web applications.  
-I enjoy turning ideas into real systems using Python and modern web technologies.
-        """)
+        st.write("")
+
+        # ---------------- ROW (BUTTON + MESSAGE) ----------------
+        btn_col, msg_col = st.columns([1, 3])
+
+        with btn_col:
+            if st.button("🚀 Say Hello"):
+                st.session_state.hello = not st.session_state.hello
+
+        with msg_col:
+            if st.session_state.hello:
+                st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
 st.markdown("---")
 
