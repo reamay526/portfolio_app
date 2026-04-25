@@ -2,22 +2,19 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="wide")
 
-# ---------------- STYLE (YOUR DESIGN + GLASS EFFECT) ----------------
+# ---------------- STYLE (KEEP YOUR DESIGN) ----------------
 st.markdown("""
 <style>
 
-/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* CONTAINER */
 .block-container {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -79,7 +76,8 @@ st.markdown("""
 <h3>👩‍💻 Profile</h3>
 <p>
 I am a BS Computer Science student (3B) at DEBESMSCAT.
-I am passionate about building clean, functional, and user-friendly digital solutions using modern technologies.
+I am passionate about software development and building clean, functional, and user-friendly web applications.
+I enjoy turning ideas into real digital solutions using modern technologies.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -89,7 +87,8 @@ st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
 <p>
-Bachelor of Science in Computer Science (3rd Year, Section 3B)<br>
+Bachelor of Science in Computer Science<br>
+3rd Year – Section 3B<br>
 DEBESMSCAT
 </p>
 </div>
@@ -117,7 +116,7 @@ st.markdown("""
 <h3>🚀 Interests</h3>
 <p>
 I am currently focused on improving my skills in web development and software engineering.
-I enjoy building interactive and responsive web applications with clean UI design.
+I enjoy designing and building interactive web applications with clean UI and better user experience.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -128,8 +127,8 @@ st.markdown("""
 <h3>🎯 Goals</h3>
 <p>
 ✔ Become a professional full-stack developer<br>
-✔ Strengthen UI/UX and web development skills<br>
-✔ Build real-world, impactful applications<br>
+✔ Strengthen UI/UX and modern web development skills<br>
+✔ Build real-world and impactful applications<br>
 ✔ Continuously grow in programming and system design
 </p>
 </div>
