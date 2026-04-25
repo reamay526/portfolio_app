@@ -52,7 +52,7 @@ section[data-testid="stSidebar"] div:hover {
     border-radius: 10px;
 }
 
-/* ✅ UPDATED BUTTON GRADIENT */
+/* BUTTON */
 div.stButton > button {
     background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
     color: white !important;
@@ -86,6 +86,10 @@ with col2:
     with left:
         st.image("mayie.png", width=250)
 
+        # ✅ MOVED BUTTON HERE (UNDER IMAGE)
+        if st.button("🚀 Say Hello"):
+            st.success("Hello! Welcome to my portfolio 👋")
+
     with right:
         st.markdown("### Rea May M. Villanueva")
         
@@ -98,9 +102,6 @@ with col2:
         I am continuously improving my skills in programming, design, and development.
         """)
 
-        if st.button("🚀 Say Hello"):
-            st.success("Hello! Welcome to my portfolio 👋")
-            
 st.markdown("---")
 
 # ---------------- INFO ----------------
