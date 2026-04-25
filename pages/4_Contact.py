@@ -5,30 +5,41 @@ st.set_page_config(page_title="Contact", layout="wide")
 st.markdown("""
 <style>
 
-/* FULL BACKGROUND FIX (REMOVES WHITE AREAS) */
+/* FULL BACKGROUND */
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
 }
 
-/* REMOVE HEADER WHITE BAR */
+/* REMOVE HEADER */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* MAIN TEXT */
+/* TEXT COLOR */
 html, body, .stApp {
     color: #000000 !important;
 }
 
-/* CONTAINER */
+/* REMOVE SPACE ABOVE + BELOW TITLE */
 .block-container {
     background: transparent !important;
-    padding-top: 3rem;
+    padding-top: 1rem !important;
     max-width: 900px;
     margin: auto;
 }
 
-/* CARD STYLE (CLEAN WHITE, NO GRAY) */
+/* REMOVE WHITE STRIP UNDER TITLE */
+h1 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* REMOVE EMPTY SPACE BLOCK */
+div[data-testid="stVerticalBlock"] > div:empty {
+    display: none !important;
+}
+
+/* CARD */
 .card {
     background: #ffffff;
     padding: 25px;
@@ -38,13 +49,22 @@ html, body, .stApp {
     text-align: center;
 }
 
-/* INPUT STYLE */
-input, textarea {
+/* FIX INPUT FIELDS */
+div[data-baseweb="input"] input {
+    background-color: white !important;
+    color: black !important;
     border-radius: 10px !important;
     border: 1px solid #ddd !important;
 }
 
-/* BUTTON (VISIBLE + GRADIENT) */
+div[data-baseweb="textarea"] textarea {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+}
+
+/* BUTTON */
 div.stButton > button {
     background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
     color: white !important;
@@ -97,10 +117,10 @@ section[data-testid="stSidebar"] div:hover {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
+# TITLE
 st.title("📬 Contact Me")
 
-# ---------------- FORM ----------------
+# FORM
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Name")
@@ -115,7 +135,7 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- LINKS ----------------
+# LINKS
 st.markdown("""
 <div class="card">
 <h3>🌐 Connect With Me</h3>
