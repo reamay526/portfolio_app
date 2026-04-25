@@ -95,15 +95,11 @@ with col2:
     with right:
         st.markdown("### Rea May M. Villanueva")
 
-        st.write("🎓 BS Computer Science (3rd Year)")
+        st.write("🎓 BS Computer Science (3B)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
-        st.write("""
-I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
-
-I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
-        """)
+        st.write("""Aspiring Computer Science student building clean and user-friendly web applications. """)
 
 st.markdown("---")
 
