@@ -8,7 +8,7 @@ st.markdown("""
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Arial;
+    font-family: Bold Arial;
 }
 
 /* REMOVE TOP WHITE GAP */
