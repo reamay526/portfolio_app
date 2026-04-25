@@ -6,15 +6,18 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
+/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
+/* REMOVE TOP WHITE SPACE */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
+/* MAIN CONTAINER */
 .block-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -28,10 +31,10 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
 /* TITLE */
 .top-title {
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 800;
     color: white;
+    margin-bottom: 30px;
 }
 
 /* SIDEBAR */
@@ -73,12 +76,12 @@ if "hello" not in st.session_state:
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
-    left, right = st.columns([1.5, 2.5], gap="large")
+    left, right = st.columns([1.2, 2.8], gap="large")
 
+    # ---------------- IMAGE + BUTTON ----------------
     with left:
-        st.image("mayie.png", width=230)
+        st.image("mayie.png", width=220)
 
-        # ✅ UNDER IMAGE: BUTTON + MESSAGE (PAHIGA)
         btn, msg = st.columns([1, 3])
 
         with btn:
@@ -89,30 +92,34 @@ with col2:
             if st.session_state.hello:
                 st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
+    # ---------------- INFO ----------------
     with right:
         st.markdown("### Rea May M. Villanueva")
-        st.write("🎓 BS Computer Science (3B)")
+
+        st.write("🎓 BS Computer Science (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
         st.write("""
-I am an aspiring Computer Science student passionate about building clean, functional, and user-friendly web applications.
-I enjoy turning ideas into real systems using Python and modern web technologies.
+I am a Computer Science student passionate about building clean and user-friendly digital solutions.
+I enjoy turning ideas into functional applications using Python and web technologies.
+
+I am continuously improving my skills in programming, interface design, and system development.
         """)
 
 st.markdown("---")
 
-# ---------------- INFO ----------------
+# ---------------- HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
     st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
+    st.write("Become a skilled and creative developer")
 
 with c2:
     st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
+    st.write("Build clean and functional web applications")
 
 with c3:
     st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
+    st.write("Improve Python, UI design, and web development")
