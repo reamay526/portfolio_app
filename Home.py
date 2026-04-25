@@ -6,18 +6,15 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
-/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
-/* HEADER FIX */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* CONTAINER */
 .block-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -81,24 +78,27 @@ with col2:
     with left:
         st.image("mayie.png", width=230)
 
+        # ✅ UNDER IMAGE: BUTTON + MESSAGE (PAHIGA)
+        btn, msg = st.columns([1, 3])
+
+        with btn:
+            if st.button("🚀 Say Hello"):
+                st.session_state.hello = not st.session_state.hello
+
+        with msg:
+            if st.session_state.hello:
+                st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
+
     with right:
         st.markdown("### Rea May M. Villanueva")
         st.write("🎓 BS Computer Science (3B)")
         st.write("💻 Aspiring Developer & UI Designer")
         st.write("🌐 Interested in Web Development")
 
-        st.write("")
-
-        # ---------------- ROW (BUTTON + MESSAGE) ----------------
-        btn_col, msg_col = st.columns([1, 3])
-
-        with btn_col:
-            if st.button("🚀 Say Hello"):
-                st.session_state.hello = not st.session_state.hello
-
-        with msg_col:
-            if st.session_state.hello:
-                st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
+        st.write("""
+I am an aspiring Computer Science student passionate about building clean, functional, and user-friendly web applications.
+I enjoy turning ideas into real systems using Python and modern web technologies.
+        """)
 
 st.markdown("---")
 
