@@ -36,7 +36,7 @@ h1, h2, h3 {
 
 /* GLASS CARD */
 .card {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 22px;
@@ -48,18 +48,26 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* INPUT STYLE (FIXED TEXT COLOR) */
+/* INPUT STYLE (SOFT GLASS LOOK) */
 input, textarea {
     border-radius: 10px !important;
     font-weight: 700 !important;
     color: #000000 !important;
 }
 
-/* STREAMLIT INPUT FIX */
+/* STREAMLIT INPUT FIX (LESS WHITE) */
 .stTextInput input,
 .stTextArea textarea {
     color: #000000 !important;
-    background-color: rgba(255,255,255,0.95) !important;
+    background-color: rgba(255,255,255,0.75) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+}
+
+/* FOCUS EFFECT */
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    background-color: rgba(255,255,255,0.9) !important;
+    border: 1px solid #7a00ff !important;
 }
 
 /* BUTTON */
