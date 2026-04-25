@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="wide")
 
-# ---------------- STYLE (KEEP YOUR DESIGN) ----------------
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -42,15 +42,15 @@ h1, h2, h3 {
     margin-bottom: 25px;
 }
 
-/* GLASS CARD */
+/* GLASS CARD (SOFTER + CLEANER) */
 .card {
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 10px 14px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 14px 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -76,7 +76,7 @@ st.markdown("""
 <h3>👩‍💻 Profile</h3>
 <p>
 I am a BS Computer Science student (3B) at DEBESMSCAT.
-I am passionate about software development and building clean, functional, and user-friendly web applications.
+I am passionate about software development and creating clean, functional, and user-friendly web applications.
 I enjoy turning ideas into real digital solutions using modern technologies.
 </p>
 </div>
@@ -94,18 +94,12 @@ DEBESMSCAT
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- SKILLS ----------------
+# ---------------- SKILLS SUMMARY ----------------
 st.markdown("""
 <div class="card">
-<h3>💻 Technical Skills</h3>
+<h3>💻 Technical Background</h3>
 <p>
-✔ HTML<br>
-✔ CSS<br>
-✔ Python<br>
-✔ Java<br>
-✔ GitHub<br>
-✔ VS Code<br>
-✔ Streamlit
+HTML • CSS • Python • Java • GitHub • VS Code • Streamlit
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -115,8 +109,8 @@ st.markdown("""
 <div class="card">
 <h3>🚀 Interests</h3>
 <p>
-I am currently focused on improving my skills in web development and software engineering.
-I enjoy designing and building interactive web applications with clean UI and better user experience.
+Focused on web development, UI/UX design, and building interactive applications.
+I enjoy learning how systems work and how to improve user experience through clean design.
 </p>
 </div>
 """, unsafe_allow_html=True)
@@ -127,9 +121,9 @@ st.markdown("""
 <h3>🎯 Goals</h3>
 <p>
 ✔ Become a professional full-stack developer<br>
-✔ Strengthen UI/UX and modern web development skills<br>
+✔ Improve UI/UX and web development skills<br>
 ✔ Build real-world and impactful applications<br>
-✔ Continuously grow in programming and system design
+✔ Strengthen problem-solving and programming skills
 </p>
 </div>
 """, unsafe_allow_html=True)
