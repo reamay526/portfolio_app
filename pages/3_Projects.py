@@ -8,6 +8,11 @@ st.markdown("""
 
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
+    font-family: Arial, sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
 }
 
 .block-container {
@@ -15,29 +20,40 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
+/* TEXT */
+html, body, .stApp, p, div, span, label {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+
+/* TITLE */
 h1 {
     text-align: center;
     color: white !important;
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 
-/* Card */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.25);
-    padding: 16px;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
 }
 
-/* Sidebar */
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
 section[data-testid="stSidebar"] * {
     color: white !important;
+    font-weight: 700 !important;
 }
 
 </style>
@@ -46,43 +62,29 @@ section[data-testid="stSidebar"] * {
 # ---------------- TITLE ----------------
 st.markdown("<h1>💼 My Projects</h1>", unsafe_allow_html=True)
 
-# ---------------- INTERACTIVE FILTER (REQUIRED FIX) ----------------
-category = st.selectbox(
-    "Filter projects by category:",
-    ["All", "Streamlit", "Frontend", "Practice Projects"]
-)
+# ---------------- PROJECT GRID ----------------
+col1, col2 = st.columns(2)
 
-# ---------------- PROJECT DATA (SIMPLIFIED LOGIC) ----------------
-projects = {
-    "Streamlit": {
-        "title": "🌐 Portfolio App",
-        "desc": "Multipage Streamlit Portfolio Application"
-    },
-    "Frontend": {
-        "title": "👩‍💻 Personal Website",
-        "desc": "HTML/CSS Portfolio Design"
-    },
-    "Practice Projects": {
-        "title": "🎨 Bootstrap Project",
-        "desc": "Responsive Web Design Practice"
-    }
-}
+with col1:
+    st.markdown("""
+    <div class="card">
+    <h3>🌐 Portfolio App</h3>
+    <p>Streamlit Multipage Portfolio</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ---------------- DISPLAY LOGIC ----------------
-for key, project in projects.items():
-    if category == "All" or category == key:
+with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>👩‍💻 Personal Website</h3>
+    <p>HTML/CSS Personal Portfolio Design</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-        st.markdown(f"""
-        <div class="card">
-            <h3>{project['title']}</h3>
-            <p>{project['desc']}</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        if st.button(f"View Details - {project['title']}"):
-            st.info(f"""
-            Project: {project['title']}
-            Description: {project['desc']}
-            Status: Completed
-            Tools: HTML, CSS, Streamlit (depending on project)
-            """)
+# ---------------- THIRD PROJECT ----------------
+st.markdown("""
+<div class="card">
+<h3>🎨 Bootstrap Project</h3>
+<p>Responsive Web Design Practice using Bootstrap</p>
+</div>
+""", unsafe_allow_html=True)
