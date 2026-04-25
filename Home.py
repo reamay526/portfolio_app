@@ -30,34 +30,29 @@ section[data-testid="stSidebar"] {
 /* SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: black !important;
+}
+
 /* BUTTON STYLE FIX */
-.stButton > button {
-    background: linear-gradient(90deg, #ff0057, #7a00ff);
+div.stButton > button, div.stButton > button:focus, div.stButton > button:active {
+    background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
+    background-image: linear-gradient(90deg, #ff0057, #7a00ff) !important;
     color: #ffffff !important;
     border-radius: 20px;
     padding: 12px 24px;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,255,255,0.4);
     font-weight: 700;
     box-shadow: 0 6px 18px rgba(255, 0, 87, 0.35);
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    opacity: 1 !important;
+    cursor: pointer;
 }
 
-.stButton > button:hover {
-    background: linear-gradient(90deg, #ff2e6f, #9b2dff);
+div.stButton > button:hover {
+    background: linear-gradient(90deg, #ff2e6f, #9b2dff) !important;
+    background-image: linear-gradient(90deg, #ff2e6f, #9b2dff) !important;
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
     box-shadow: 0 8px 22px rgba(155, 45, 255, 0.4);
-}
-
-.stButton > button:hover {
-    background: linear-gradient(90deg, #3a1470, #ff4fa3);
-    transform: scale(1.02);
-    transition: 0.2s ease-in-out;
-}
-
-.stButton > button:hover {
-    opacity: 0.85;
-    cursor: pointer;
 }
 
 .block-container {
