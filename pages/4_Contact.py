@@ -5,9 +5,27 @@ st.set_page_config(page_title="Contact", layout="wide")
 st.markdown("""
 <style>
 
-/* FULL BACKGROUND FIX (REMOVES WHITE AREAS) */
+/* FULL BACKGROUND (REMOVE ALL WHITE AREAS) */
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
+}
+
+/* REMOVE TOP WHITE GAP */
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+/* REMOVE CONTAINER WHITE SPACE */
+.block-container {
+    background: transparent !important;
+    padding-top: 1rem !important;
+    padding-bottom: 3rem;
+    max-width: 900px;
+    margin: auto;
 }
 
 /* MAIN TEXT */
@@ -15,15 +33,14 @@ html, body, .stApp {
     color: #000000 !important;
 }
 
-/* CONTAINER */
-.block-container {
-    background: transparent !important;
-    padding-top: 3rem;
-    max-width: 900px;
-    margin: auto;
+/* TITLE FIX (IMPORTANT) */
+h1 {
+    color: white !important;
+    text-align: center;
+    margin-top: 0px;
 }
 
-/* CARD STYLE (CLEAN WHITE, NO GRAY) */
+/* CARD STYLE */
 .card {
     background: #ffffff;
     padding: 25px;
@@ -33,13 +50,13 @@ html, body, .stApp {
     text-align: center;
 }
 
-/* INPUT STYLE */
+/* INPUT */
 input, textarea {
     border-radius: 10px !important;
     border: 1px solid #ddd !important;
 }
 
-/* BUTTON (VISIBLE + GRADIENT) */
+/* BUTTON */
 div.stButton > button {
     background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
     color: white !important;
@@ -48,12 +65,10 @@ div.stButton > button {
     padding: 10px 20px !important;
     border: none !important;
     width: 100%;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 div.stButton > button:hover {
     transform: scale(1.03);
-    transition: 0.2s ease-in-out;
 }
 
 /* LINKS */
@@ -64,11 +79,6 @@ a {
 }
 a:hover {
     color: #ff0057;
-}
-
-/* HEADINGS */
-h1, h2, h3 {
-    text-align: center;
 }
 
 /* SIDEBAR */
@@ -92,8 +102,8 @@ section[data-testid="stSidebar"] div:hover {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
-st.title("📬 Contact Me")
+# ---------------- TITLE (NOW INSIDE GRADIENT CLEANLY) ----------------
+st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
 
 # ---------------- FORM ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
