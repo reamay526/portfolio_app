@@ -2,58 +2,45 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial;
 }
 
-/* REMOVE TOP GAP */
+/* REMOVE TOP BAR */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
 /* CONTAINER */
 .block-container {
-    background: transparent !important;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
-/* TEXT IMPROVEMENT */
-html, body, .stApp, p, div, span, label {
-    color: #111 !important;
-    font-size: 16px;
-    line-height: 1.7;
+/* TEXT */
+html, body, .stApp, p, div, span, label, h1, h2, h3 {
+    color: #000000 !important;
 }
 
 /* HERO TITLE */
-.top-title {
+.hero-title {
     text-align: center;
     font-size: 42px;
     font-weight: 800;
-    margin-bottom: 20px;
     color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
 }
 
-/* SIDEBAR */
-section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
-}
-
-section[data-testid="stSidebar"] * {
-    color: white !important;
-    font-weight: 500;
-}
-
-section[data-testid="stSidebar"] div:hover {
-    background-color: rgba(255,255,255,0.15);
-    border-radius: 10px;
+.hero-role {
+    text-align: center;
+    font-size: 18px;
+    color: #f2f2f2;
+    margin-bottom: 25px;
 }
 
 /* BUTTON */
@@ -65,6 +52,7 @@ div.stButton > button {
     border: none;
     font-weight: 700;
     box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
+    width: 100%;
 }
 
 div.stButton > button:hover {
@@ -72,59 +60,87 @@ div.stButton > button:hover {
     transition: 0.2s ease-in-out;
 }
 
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- HERO TITLE ----------------
-st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
-
-st.write("")
+st.markdown('<div class="hero-title">Rea May M. Villanueva</div>', unsafe_allow_html=True)
+st.markdown('<div class="hero-role">Aspiring Developer • UI Designer • BS Computer Science</div>', unsafe_allow_html=True)
 
 # ---------------- HERO SECTION ----------------
-col1, col2 = st.columns([1, 2])
-
-with col1:
-    st.image("mayie.png", width=240)
-
-    if st.button("🚀 Say Hello"):
-        st.success("Hello! Welcome to my portfolio 👋")
+col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    st.markdown("""
-    ### Rea May M. Villanueva
 
-    🎓 **BS Computer Science (3rd Year)**  
-    💻 **Aspiring Developer & UI Designer**  
-    🌐 **Web Development Enthusiast**
+    left, right = st.columns([1, 2], gap="large")
 
-    ---
-    
-    I am a Computer Science student passionate about building **clean, functional, and user-friendly applications**.  
-    I enjoy transforming ideas into real systems using **Python and web technologies**.
+    with left:
+        st.image("mayie.png", width=220)
 
-    I continuously improve my skills in **programming, UI design, and system development**,  
-    aiming to build efficient and meaningful digital solutions.
-    """)
+        # ---------------- TOGGLE BUTTON ----------------
+        if "hello_clicked" not in st.session_state:
+            st.session_state.hello_clicked = False
 
-st.markdown("---")
+        if st.button("🚀 Say Hello"):
+            st.session_state.hello_clicked = not st.session_state.hello_clicked
+
+        if st.session_state.hello_clicked:
+            st.markdown("""
+            <div style="
+                background: white;
+                padding: 12px;
+                border-radius: 12px;
+                text-align: center;
+                margin-top: 10px;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            ">
+                👋 Hello! Welcome to my portfolio
+            </div>
+            """, unsafe_allow_html=True)
+
+    with right:
+        st.markdown("""
+        ### 👋 About Me
+
+        I am a Computer Science student passionate about building clean, functional, and user-friendly applications.
+
+        I enjoy turning ideas into real systems using Python and web development tools.
+        """)
 
 # ---------------- QUICK HIGHLIGHTS ----------------
+st.markdown("<br>", unsafe_allow_html=True)
+
 c1, c2, c3 = st.columns(3)
 
 with c1:
     st.markdown("""
-    ### 🎯 Goal  
-    Become a skilled and creative developer
-    """)
+    <div class="card">
+    🎯 Goal<br>
+    Become a skilled developer
+    </div>
+    """, unsafe_allow_html=True)
 
 with c2:
     st.markdown("""
-    ### 🚀 Focus  
-    Web development & UI design
-    """)
+    <div class="card">
+    🚀 Focus<br>
+    Clean web applications
+    </div>
+    """, unsafe_allow_html=True)
 
 with c3:
     st.markdown("""
-    ### 🌱 Learning  
-    Python • Streamlit • Frontend
-    """)
+    <div class="card">
+    🌱 Learning<br>
+    Python • UI Design • Web Dev
+    </div>
+    """, unsafe_allow_html=True)
