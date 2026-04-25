@@ -47,7 +47,7 @@ h1 {
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     margin-bottom: 15px;
     text-align: center;
-    max-width: 500px;       /* 🔥 makes box smaller */
+    max-width: 350px;       /* 🔥 makes box smaller */
     margin-left: auto;
     margin-right: auto;     /* centers the box */
 }
