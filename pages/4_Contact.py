@@ -12,17 +12,17 @@ st.markdown("""
     font-family: Arial, sans-serif;
 }
 
-/* REMOVE ALL TOP SPACING */
+/* REMOVE TOP SPACE */
 [data-testid="stAppViewContainer"] {
     padding-top: 0rem !important;
 }
 
-/* REMOVE HEADER SPACE */
+/* HEADER FIX */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* FORCE MAIN CONTAINER TO MOVE UP */
+/* CONTAINER */
 .block-container {
     padding-top: 0rem !important;
     padding-bottom: 1.5rem !important;
@@ -39,19 +39,20 @@ h1 {
     text-align: center;
     font-weight: 900 !important;
     margin-top: 0px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 8px !important;
 }
 
-/* CARD */
+/* GLASS CARD */
 .card {
     background: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     border: 1px solid rgba(255,255,255,0.3);
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto 15px auto;
 }
 
 /* INPUTS */
@@ -101,7 +102,7 @@ section[data-testid="stSidebar"] * {
 # ---------------- TITLE ----------------
 st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
 
-# ---------------- FORM ----------------
+# ---------------- FORM CARD ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Your Name")
@@ -116,10 +117,10 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS ----------------
+# ---------------- SOCIAL LINKS CARD ----------------
 st.markdown("""
 <div class="card">
-<h3 style='text-align:center;'>🌐 Connect With Me</h3>
+<h3 style="text-align:center;">🌐 Connect With Me</h3>
 
 <div style="text-align:center; line-height:2;">
     <a href="https://github.com/reamay526" target="_blank">GitHub</a><br><br>
