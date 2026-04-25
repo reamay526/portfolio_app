@@ -1,84 +1,129 @@
-# 🌐 Personal Portfolio Web App (Streamlit)
+# 🌐 Portfolio App (Streamlit Multipage Web Application)
 
-## 👩‍💻 Overview
+This is a multipage portfolio web application built using **Streamlit**
+and Python.
 
-This is a multipage personal portfolio web application built using
-Streamlit (Python).\
-It showcases my personal profile, skills, projects, and contact
-information in a modern, interactive, and responsive web interface.
+The project is deployed and accessible online: 👉
+https://reamay526-portfolio-app-home-veqy4o.streamlit.app/
 
-The goal of this project is to demonstrate web development skills using
-Python and Streamlit, including UI design, interactivity, and multipage
-navigation.
-
-------------------------------------------------------------------------
-
-## 🚀 Live Application
-
-https://reamay526-portfolio-app-home-veqy4o.streamlit.app
+GitHub Repository: 👉 https://github.com/reamay526/portfolio_app
 
 ------------------------------------------------------------------------
 
 ## 📁 Project Structure
 
-Home.py pages/ About.py Skills.py Projects.py Contact.py
-
-mayie.png requirements.txt README.md
-
-------------------------------------------------------------------------
-
-## 📌 Features
-
--   🏠 Home Page -- Personal introduction and welcome section\
--   👤 About Page -- Background, education, and interests\
--   💻 Skills Page -- Technical skills with progress indicators\
--   💼 Projects Page -- Showcase of personal and academic projects\
--   📬 Contact Page -- Interactive contact form with validation and
-    social links\
--   🎨 Modern UI with gradient background and glassmorphism design\
--   📱 Fully responsive layout using Streamlit columns\
--   🔄 Multipage navigation using Streamlit's built-in system
+    portfolio_app/
+    │── Home.py
+    │
+    │── pages/
+    │     ├── 1_About.py
+    │     ├── 2_Projects.py
+    │     ├── 3_Skills.py
+    │     ├── 4_Contact.py
+    │
+    ├── mayie.png
+    │
+    │── README.md
+    │── requirements.txt
 
 ------------------------------------------------------------------------
 
-## 🛠️ Tech Stack
+## 🏠 Home Page
 
--   Python\
--   Streamlit\
--   HTML/CSS (via Streamlit markdown styling)
-
-------------------------------------------------------------------------
-
-## ⚙️ How to Run Locally
-
-1.  Clone the repository git clone
-    https://github.com/reamay526/portfolio_app.git
-
-2.  Install dependencies pip install streamlit
-
-3.  Run the application streamlit run Home.py
+-   Welcome section
+-   Personal introduction:
+    -   Rea May Villanueva
+    -   Computer Science Student (3rd Year)
+    -   Aspiring Developer & UI Designer
+-   Short description of portfolio purpose
+-   Strength, Focus, and Growth sections
 
 ------------------------------------------------------------------------
 
-## 🎯 Purpose of the Project
+## 📖 About Page
 
-This project was created for academic purposes to: - Practice Python web
-development using Streamlit\
-- Build a structured multipage web application\
-- Improve UI/UX design skills\
-- Learn deployment using Streamlit Community Cloud
-
-------------------------------------------------------------------------
-
-## 👨‍🎓 Developer
-
-Rea May Villanueva\
-Bachelor of Science in Computer Science\
-DEBESMSCAT
+-   Personal profile introduction
+-   Student background
+-   Interests in programming and web development
+-   Strength and Focus sections
+-   Expandable section for additional information
 
 ------------------------------------------------------------------------
 
-## 📌 Note
+## 💼 Projects Page
 
-This project demonstrates a fully functional multipage web application
-with interactive components and a modern UI design using Streamlit.
+-   Portfolio App project description
+-   Weather App project description
+-   Additional placeholders for future projects
+-   Buttons for viewing project details
+
+------------------------------------------------------------------------
+
+## 🧠 Skills Page
+
+-   Python skill progress bar
+-   Streamlit skill progress bar
+-   HTML/CSS skill progress bar
+-   Problem Solving progress bar
+-   Tools list:
+    -   Python
+    -   Streamlit
+    -   GitHub
+    -   VS Code
+
+------------------------------------------------------------------------
+
+## 📬 Contact Page
+
+-   Input fields:
+    -   Name
+    -   Email
+    -   Message
+-   Submit button
+-   Form validation:
+    -   Success message if all fields are filled
+    -   Error message if fields are incomplete
+
+------------------------------------------------------------------------
+
+## 🚀 Features
+
+-   Multipage navigation using Streamlit Pages
+-   Clean and simple UI layout
+-   Interactive components:
+    -   Buttons
+    -   Input fields
+    -   Progress bars
+    -   Expanders
+-   Personal portfolio presentation
+-   Image integration (`mayie.png`)
+-   Deployed web application
+
+------------------------------------------------------------------------
+
+## ▶️ How to Run Locally
+
+1.  Install dependencies:
+
+``` bash
+pip install -r requirements.txt
+```
+
+2.  Run the app:
+
+``` bash
+streamlit run Home.py
+```
+
+------------------------------------------------------------------------
+
+## 🛠 Technologies Used
+
+-   Python
+-   Streamlit
+
+------------------------------------------------------------------------
+
+## 👩‍💻 Author
+
+**Rea May Villanueva**
