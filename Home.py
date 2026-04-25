@@ -22,6 +22,7 @@ st.markdown("""
 
 /* TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
+    font-weight: 400;
     color: #000000 !important;
 }
 
@@ -75,41 +76,40 @@ with col2:
 
     left, right = st.columns([1.2, 2.8], gap="large")
 
-    # ---------------- LEFT SIDE ----------------
+    # ---------------- LEFT (IMAGE + BUTTON) ----------------
     with left:
         st.image("mayie.png", width=220)
 
-        # BUTTON
         if st.button("🚀 Say Hello"):
             st.session_state.hello = not st.session_state.hello
 
-        # MESSAGE (ONLY SIMPLE, CLEAN)
         if st.session_state.hello:
-            st.info("👋 Hi there! Glad you’re here — explore my portfolio.")
+            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-    # ---------------- RIGHT SIDE ----------------
+    # ---------------- RIGHT (ONLY CORE INFO) ----------------
     with right:
         st.markdown("### Rea May Villanueva")
-        st.write("💻 Aspiring Developer & UI Designer")
+
         st.write("🎓 Computer Science Student (3rd Year)")
+        st.write("💻 Aspiring Developer & UI Designer")
 
         st.write("""
 I build clean and user-friendly web applications using Python and Streamlit.
         """)
 
-# ---------------- QUICK HIGHLIGHTS (HOME ONLY SUMMARY) ----------------
+# ---------------- CLEAN FOOTER HIGHLIGHT (MINIMAL ONLY) ----------------
 st.markdown("---")
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown("### ⚡ Quick Highlight")
-    st.write("Passionate about web development")
+    st.markdown("### ⚡ Strength")
+    st.write("Clean & simple UI design")
 
 with c2:
-    st.markdown("### 🛠 Focus")
-    st.write("Building simple & clean UI apps")
+    st.markdown("### 🚀 Focus")
+    st.write("Web app development")
 
 with c3:
-    st.markdown("### 📚 Current Learning")
+    st.markdown("### 🌱 Growth")
     st.write("Python • Streamlit • UI/UX")
