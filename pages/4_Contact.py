@@ -18,14 +18,13 @@ st.markdown("""
 }
 
 .block-container {
-    padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
 
 /* TITLE */
 h1, h2, h3 {
     text-align: center;
-    color: white !important;
+    color: black !important;
     font-weight: 900 !important;
 }
 
