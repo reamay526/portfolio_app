@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE (UNCHANGED DESIGN) ----------------
+# ---------------- STYLE (UNCHANGED) ----------------
 st.markdown("""
 <style>
 
@@ -22,7 +22,6 @@ st.markdown("""
 
 /* TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
-    font-weight: 400;
     color: #000000 !important;
 }
 
@@ -65,51 +64,40 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- SESSION STATE ----------------
+# ---------------- STATE ----------------
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
-# ---------------- HERO SECTION ----------------
+# ---------------- MAIN LAYOUT ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1.0, 2.8], gap="large")
+    left, right = st.columns([1.2, 2.8], gap="large")
 
-    # ---------------- LEFT (IMAGE + BUTTON) ----------------
+    # ---------------- LEFT SIDE ----------------
     with left:
-        st.image("mayie.png", width=200)
+        st.image("mayie.png", width=220)
 
-        if st.button("🚀 Say Hello"):
-            st.session_state.hello = not st.session_state.hello
+        # BUTTON + MESSAGE INLINE (FIXED POSITION)
+        btn_col, msg_col = st.columns([1, 2])
 
-        if st.session_state.hello:
-            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
+        with btn_col:
+            if st.button("🚀 Say Hello"):
+                st.session_state.hello = not st.session_state.hello
 
-    # ---------------- RIGHT (ONLY CORE INFO) ----------------
+        with msg_col:
+            if st.session_state.hello:
+                st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
+
+    # ---------------- RIGHT SIDE ----------------
     with right:
         st.markdown("### Rea May Villanueva")
-
-        st.write("🎓 Computer Science Student (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
+        st.write("🎓 Computer Science Student (3rd Year)")
 
         st.write("""
 I build clean and user-friendly web applications using Python and Streamlit.
         """)
 
-# ---------------- CLEAN FOOTER HIGHLIGHT (MINIMAL ONLY) ----------------
 st.markdown("---")
-
-c1, c2, c3 = st.columns(3)
-
-with c1:
-    st.markdown("### ⚡ Strength")
-    st.write("Clean & simple UI design")
-
-with c2:
-    st.markdown("### 🚀 Focus")
-    st.write("Web app development")
-
-with c3:
-    st.markdown("### 🌱 Growth")
-    st.write("Python • Streamlit • UI/UX")
