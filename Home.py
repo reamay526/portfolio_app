@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE (BOLD TEXT VERSION) ----------------
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -12,7 +12,7 @@ st.markdown("""
     font-family: Arial, sans-serif;
 }
 
-/* REMOVE TOP BAR */
+/* HEADER */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
@@ -23,20 +23,11 @@ st.markdown("""
     padding-bottom: 3.5rem;
 }
 
-/* GLOBAL TEXT (ALL BOLD) */
+/* GLOBAL TEXT */
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
-    font-size: 16px;
-    line-height: 1.7;
     font-weight: 700 !important;
-}
-
-/* HEADINGS (EXTRA BOLD) */
-h1, h2, h3 {
-    color: #000000 !important;
-    font-weight: 900 !important;
-    letter-spacing: 0.3px;
-    margin-bottom: 10px;
+    line-height: 1.7;
 }
 
 /* TITLE */
@@ -84,7 +75,7 @@ st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
-# ---------------- HERO ----------------
+# ---------------- HERO SECTION ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
@@ -101,9 +92,20 @@ with col2:
         if st.session_state.hello:
             st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-    # RIGHT SIDE
+    # RIGHT SIDE (NAME BIGGER HERE)
     with right:
-        st.markdown("### Rea May Villanueva")
+
+        st.markdown("""
+        <h1 style="
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #000000;
+        ">
+        Rea May Villanueva
+        </h1>
+        """, unsafe_allow_html=True)
+
         st.write("🎓 Computer Science Student (3rd Year)")
         st.write("💻 Aspiring Developer & UI Designer")
 
