@@ -32,11 +32,12 @@ section[data-testid="stSidebar"] * {
     color: black !important;
 
 .stButton > button {
-    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
 }
-
-.stButton > button:hover {
-    transform: scale(1.08);
 
 .block-container {
     padding-top: 3rem;
