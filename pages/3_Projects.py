@@ -20,32 +20,39 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
+/* TEXT */
 html, body, .stApp, p, div, span, label {
     color: #111111 !important;
     font-weight: 700 !important;
 }
 
+/* TITLE */
 h1 {
     text-align: center;
     color: white !important;
     font-weight: 900 !important;
 }
 
+/* CARD */
 .card {
     background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(10px);
     padding: 18px;
     border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
     margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     text-align: center;
 }
 
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
 section[data-testid="stSidebar"] * {
     color: white !important;
+    font-weight: 700 !important;
 }
 
 </style>
@@ -57,14 +64,23 @@ st.markdown("<h1>💼 My Projects</h1>", unsafe_allow_html=True)
 # ---------------- PROJECT GRID ----------------
 col1, col2 = st.columns(2)
 
+# LEFT COLUMN
 with col1:
     st.markdown("""
     <div class="card">
     <h3>🌐 Portfolio App</h3>
-    <p>Streamlit Multipage Portfolio</p>
+    <p>Streamlit multipage portfolio showcasing projects.</p>
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown("""
     <div class="card">
-    <h3>🧮 Calculator App</h
+    <h3>🧮 Calculator App</h3>
+    <p>Python calculator built in Pydroid with basic operations.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="card">
+    <h3>📊 Simple Grading System</h3>
+    <p>Python
