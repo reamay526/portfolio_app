@@ -1,70 +1,65 @@
-# 🌐 Streamlit Multipage Portfolio
+# 📌 Personal Portfolio Web App (Streamlit)
 
-## ✨ Overview
-This is a multipage portfolio web application built using Streamlit.  
-It is designed to showcase personal information, skills, projects, and contact details in a clean, interactive, and user-friendly interface.
-
----
-
-## 👤 Developer
-**Rea May M. Villanueva**  
-BS Computer Science 3B
+## 👩‍💻 Overview
+This is a multipage personal portfolio web application built using Streamlit (Python).  
+It showcases my profile, skills, projects, and contact information in a clean and interactive web interface.
 
 ---
 
-## 📄 Pages
-- Home
-- About
-- Skills
-- Projects
-- Contact
-
----
-
-## 🎯 Features
-- Multipage navigation using Streamlit sidebar
-- Clean and modern UI design
-- Gradient background theme
-- Black readable fonts for accessibility
-- Interactive components:
-  - Text inputs
-  - Button interactions
-  - Dynamic success/error messages
-- Visual elements:
-  - Progress bars
-  - Expandable project sections
-  - Profile image display
-
----
-
-## 🛠️ Tech Stack
-- Python
-- Streamlit
+## 🌐 Live Demo
+https://reamay526-portfolio-app-home-veqy4o.streamlit.app
 
 ---
 
 ## 📁 Project Structure
+Home.py  
+pages/  
+  About.py  
+  Skills.py  
+  Projects.py  
+  Contact.py  
+mayie.png  
+requirements.txt  
+
+---
+
+## 📌 Features
+- 🏠 Home page with personal introduction  
+- 👤 About Me section with background and education  
+- 💻 Skills page with progress bars and tools  
+- 💼 Projects showcase with project cards  
+- 📬 Contact page with form validation and social links  
+- 🎨 Modern UI with gradient background and glassmorphism design  
+- 📱 Multipage navigation using Streamlit  
+
+---
+
+## 🛠️ Tech Stack
+- Python  
+- Streamlit  
+- HTML/CSS (via Streamlit markdown styling)  
 
 ---
 
 ## 🚀 How to Run Locally
 
+### 1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+### 2. Install Streamlit
 pip install streamlit
+
+### 3. Run the app
 streamlit run Home.py
 
 ---
 
-## 🌐 Live Deployment
-https://reamay526-portfolio-app-home-veqy4o.streamlit.app
+## 👨‍🎓 Developer
+Rea May Villanueva  
+BS Computer Science Student  
+DEBESMSCAT  
 
 ---
 
-## 🔗 GitHub Repository
-https://github.com/reamay526/portfolio_app
-
----
-
-## 📌 Notes
-- Ensure all files are properly organized
-- Home.py is the root file
-- mayie.png must be in the main directory
+## 📌 Note
+This project was developed for academic purposes to demonstrate a multipage Streamlit web application with interactive UI design and deployment using Streamlit Community Cloud.
