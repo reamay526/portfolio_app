@@ -1,117 +1,98 @@
 import streamlit as st
 
-st.set_page_config(page_title="Portfolio", layout="wide")
+st.set_page_config(page_title="Portfolio Home", layout="wide")
 
-# ---------------- STYLE ----------------
+# ---------------- CSS (CLEAN & SAFE) ----------------
 st.markdown("""
 <style>
 
-/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-[data-testid="stHeader"] {
-    background: transparent !important;
-}
-
-/* CONTAINER */
+/* Header spacing */
 .block-container {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-/* GLOBAL TEXT */
-html, body, .stApp, p, div, span, label {
-    color: #111111 !important;
-    font-weight: 700 !important;
-    line-height: 1.7;
-}
-
-/* TITLE */
-.top-title {
+/* Title */
+.main-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 42px;
     font-weight: 900;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* SIDEBAR */
-section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
+/* Card style */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    color: white;
 }
 
-section[data-testid="stSidebar"] * {
-    color: white !important;
-    font-weight: 700 !important;
-}
-
-/* BUTTON */
+/* Button */
 div.stButton > button {
-    background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
-    color: white !important;
-    border-radius: 20px;
-    padding: 10px 18px;
+    background: linear-gradient(90deg, #00c6ff, #7f00ff);
+    color: white;
+    border-radius: 12px;
     border: none;
-    font-weight: 800 !important;
+    font-weight: bold;
     width: 100%;
 }
 
 div.stButton > button:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- TITLE ----------------
-st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
-
-# ---------------- STATE ----------------
-if "hello" not in st.session_state:
-    st.session_state.hello = False
+st.markdown('<div class="main-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
 # ---------------- HERO SECTION ----------------
-col1, col2, col3 = st.columns([0.5, 3, 0.5])
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    st.image("mayie.png", width=220)
 
 with col2:
+    st.markdown("""
+    <div class="card">
+        <h2>Rea May Villanueva</h2>
+        <p>🎓 Computer Science Student (3rd Year)</p>
+        <p>💻 Aspiring Developer & UI Designer</p>
+        <p>I create clean, functional, and user-friendly web applications using Python and Streamlit.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    left, right = st.columns([1.2, 2.8], gap="large")
+# ---------------- INTERACTIVE SECTION (REQUIRED) ----------------
+st.markdown("## 🎯 Quick Interaction Section")
 
-    # LEFT SIDE
-    with left:
-        st.image("mayie.png", width=220)
+st.write("Select your interest to explore my portfolio focus:")
 
-        if st.button("🚀 Say Hello"):
-            st.session_state.hello = not st.session_state.hello
+interest = st.selectbox(
+    "Choose area:",
+    ["Web Development", "UI Design", "Python Projects", "Data Apps"]
+)
 
-        if st.session_state.hello:
-            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
+if interest == "Web Development":
+    st.info("You will see my website projects in the Projects page.")
+elif interest == "UI Design":
+    st.success("I focus on clean and modern UI layouts.")
+elif interest == "Python Projects":
+    st.warning("I build logic-based and interactive Python apps.")
+else:
+    st.error("I also explore data-driven applications.")
 
-    # RIGHT SIDE (NAME BIGGER HERE)
-    with right:
-
-        st.markdown("""
-        <h1 style="
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 10px;
-            color: #000000;
-        ">
-        Rea May Villanueva
-        </h1>
-        """, unsafe_allow_html=True)
-
-        st.write("🎓 Computer Science Student (3rd Year)")
-        st.write("💻 Aspiring Developer & UI Designer")
-
-        st.write("""
-I build clean and user-friendly web applications using Python and Streamlit.
-        """)
+# ---------------- BUTTON INTERACTION ----------------
+if st.button("🚀 Explore My Portfolio"):
+    st.success("Go to the sidebar to navigate: About, Skills, Projects, Contact")
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
@@ -120,12 +101,12 @@ c1, c2, c3 = st.columns(3)
 
 with c1:
     st.markdown("### ⚡ Strength")
-    st.write("Clean & simple UI design")
+    st.write("Clean UI & structured design")
 
 with c2:
     st.markdown("### 🚀 Focus")
-    st.write("Web app development")
+    st.write("Python + Streamlit development")
 
 with c3:
     st.markdown("### 🌱 Growth")
-    st.write("Python • Streamlit • UI/UX")
+    st.write("UI/UX + Full-stack basics")
