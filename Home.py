@@ -82,7 +82,7 @@ with col2:
     with left:
         st.image("mayie.png", width=220)
 
-        btn, msg = st.columns([1, 3])
+        btn, msg = st.columns([1, 1])
 
         with btn:
             if st.button("🚀 Say Hello"):
@@ -97,13 +97,12 @@ with col2:
         st.markdown("### Rea May M. Villanueva")
 
         st.write("🎓 BS Computer Science (3rd Year)")
+        
         st.write("💻 Aspiring Developer & UI Designer")
+        
         st.write("🌐 Interested in Web Development")
 
         st.write("""
-I am a Computer Science student passionate about building clean and user-friendly digital solutions.
-I enjoy turning ideas into functional applications using Python and web technologies.
-
 I am continuously improving my skills in programming, interface design, and system development.
         """)
 
