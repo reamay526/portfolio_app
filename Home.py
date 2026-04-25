@@ -5,18 +5,18 @@ st.set_page_config(page_title="Portfolio", layout="wide")
 st.markdown("""
 <style>
 
-/* CONSISTENT BACKGROUND (same as other pages) */
+/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
-/* REMOVE WHITE TOP GAP */
+/* REMOVE TOP WHITE GAP */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
-/* REMOVE CONTAINER WHITE BG */
+/* CONTAINER */
 .block-container {
     background: transparent !important;
     padding-top: 3rem;
@@ -52,21 +52,22 @@ section[data-testid="stSidebar"] div:hover {
     border-radius: 10px;
 }
 
-/* BUTTON */
+/* ✅ UPDATED BUTTON GRADIENT */
 div.stButton > button {
-    background: linear-gradient(90deg, #ff0057, #7a00ff) !important;
+    background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
     color: white !important;
     border-radius: 20px;
     padding: 12px 24px;
     border: none;
     font-weight: 700;
-    box-shadow: 0 6px 18px rgba(255, 0, 87, 0.35);
+    box-shadow: 0 6px 18px rgba(0, 198, 255, 0.35);
 }
 
 div.stButton > button:hover {
+    background: linear-gradient(90deg, #00e0ff, #9b2dff) !important;
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
-    box-shadow: 0 8px 22px rgba(155, 45, 255, 0.4);
+    box-shadow: 0 8px 22px rgba(0, 198, 255, 0.45);
 }
 
 </style>
@@ -75,7 +76,7 @@ div.stButton > button:hover {
 # ---------------- TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- PROFILE SECTION ----------------
+# ---------------- PROFILE ----------------
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
@@ -97,7 +98,7 @@ with col2:
 
 st.markdown("---")
 
-# ---------------- INFO CARDS ----------------
+# ---------------- INFO ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
