@@ -7,6 +7,19 @@ st.markdown("""
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
     font-family: Arial;
+
+    section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
+}
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+    font-weight: 500;
+}
+
+section[data-testid="stSidebar"] div:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
 }
 
 /* TEXT COLOR */
