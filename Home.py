@@ -81,11 +81,9 @@ with col2:
         if st.button("🚀 Say Hello"):
             st.session_state.hello = not st.session_state.hello
 
-        # FIXED OUTPUT (ALWAYS BELOW BUTTON)
+        # MESSAGE
         if st.session_state.hello:
-            st.markdown(
-                "### 👋 Hi there! Glad you’re here — feel free to explore my projects."
-            )
+            st.markdown("### 👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
     with right:
         st.markdown("### Rea May M. Villanueva")
@@ -99,3 +97,18 @@ I enjoy turning ideas into real applications using Python and web technologies.
         """)
 
 st.markdown("---")
+
+# ---------------- GOALS / HIGHLIGHTS ----------------
+c1, c2, c3 = st.columns(3)
+
+with c1:
+    st.markdown("### 🎯 Goal")
+    st.write("To become a skilled and creative developer")
+
+with c2:
+    st.markdown("### 🚀 Focus")
+    st.write("Building clean and functional web applications")
+
+with c3:
+    st.markdown("### 🌱 Learning")
+    st.write("Improving Python, UI design, and web development skills")
