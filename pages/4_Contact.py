@@ -25,16 +25,16 @@ st.markdown("""
 /* TITLE */
 h1, h2, h3 {
     text-align: center;
-    color: white !important;
+    color: black !important;
 }
 
 /* SMALL + COMPACT CARD */
 .card {
     background: #ffffff;
-    padding: 12px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    max-width: 450px;
+    max-width: 350px;
     margin: 0 auto 15px auto;
     text-align: center;
 }
@@ -96,9 +96,6 @@ section[data-testid="stSidebar"] div:hover {
 
 # TITLE
 st.markdown("<h2>📬 Contact Me</h2>", unsafe_allow_html=True)
-
-# FORM CARD
-st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Name")
 email = st.text_input("Email")
