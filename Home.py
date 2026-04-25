@@ -82,7 +82,7 @@ with col2:
     with left:
         st.image("mayie.png", width=220)
 
-        btn, msg = st.columns([1, 0])
+        btn, msg = st.columns([1])
 
         with btn:
             if st.button("🚀 Say Hello"):
