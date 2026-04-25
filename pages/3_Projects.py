@@ -9,7 +9,7 @@ st.markdown("""
     font-family: Arial;
 }
 
-/* TEXT COLOR */
+/* MAIN TEXT COLOR (SAFE) */
 html, body, .stApp {
     color: #000000 !important;
 }
@@ -21,7 +21,7 @@ html, body, .stApp {
     margin: auto;
 }
 
-/* CARD STYLE (MATCH ALL PAGES) */
+/* CARD STYLE */
 .card {
     background: rgba(255,255,255,0.80);
     padding: 25px;
@@ -35,13 +35,31 @@ html, body, .stApp {
 h1, h2, h3 {
     text-align: center;
 }
+
+/* SIDEBAR (SAFE FIX) */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
+}
+
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] div {
+    color: white !important;
+    font-weight: 500;
+}
+
+section[data-testid="stSidebar"] div:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
+}
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- TITLE ----------------
 st.title("💼 Projects")
 
-# ---------------- MAIN PROJECT ----------------
+# ---------------- PROJECT 1 ----------------
 st.markdown("""
 <div class="card">
 <h3>🌐 Portfolio App</h3>
@@ -49,7 +67,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- OTHER PROJECTS ----------------
+# ---------------- PROJECT 2 ----------------
 st.markdown("""
 <div class="card">
 <h3>🧩 Other Projects</h3>
