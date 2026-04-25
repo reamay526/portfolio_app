@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -15,21 +14,9 @@ st.markdown("""
     background: transparent !important;
 }
 
-/* 🔥 FIX SPACING */
 .block-container {
-    padding-top: 1rem !important;
-    padding-bottom: 0rem !important;
-}
-
-/* REMOVE EXTRA SPACE BETWEEN SECTIONS */
-hr {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-}
-
-/* REMOVE COLUMN PADDING (CAUSE OF GAP) */
-div[data-testid="column"] {
-    padding: 0 !important;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* TEXT */
@@ -43,7 +30,7 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     font-size: 38px;
     font-weight: 800;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 /* SIDEBAR */
@@ -63,7 +50,6 @@ div.stButton > button {
     padding: 10px 18px;
     border: none;
     font-weight: 700;
-    width: 100%;
 }
 
 div.stButton > button:hover {
@@ -86,23 +72,17 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
-    left, right = st.columns([1.2, 2.8], gap="small")
+    left, right = st.columns([1.2, 2.8], gap="large")
 
-    # LEFT SIDE
     with left:
         st.image("mayie.png", width=220)
 
-        btn_col, msg_col = st.columns([1, 2])
+        if st.button("🚀 Say Hello"):
+            st.session_state.hello = not st.session_state.hello
 
-        with btn_col:
-            if st.button("🚀 Say Hello"):
-                st.session_state.hello = not st.session_state.hello
+        if st.session_state.hello:
+            st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-        with msg_col:
-            if st.session_state.hello:
-                st.markdown("👋 Hi there! Glad you’re here — explore my portfolio.")
-
-    # RIGHT SIDE
     with right:
         st.markdown("### Rea May Villanueva")
         st.write("💻 Aspiring Developer & UI Designer")
@@ -110,13 +90,11 @@ with col2:
 
         st.write("""
 I build clean and user-friendly web applications using Python and Streamlit.
-I enjoy turning ideas into real working systems.
         """)
 
-# 🔥 CLEAN DIVIDER (LESS SPACE)
-st.markdown("<hr style='margin:10px 0;'>", unsafe_allow_html=True)
+st.markdown("---")
 
-# ---------------- HIGHLIGHTS ----------------
+# ---------------- QUICK HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
