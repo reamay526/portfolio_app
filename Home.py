@@ -30,16 +30,23 @@ section[data-testid="stSidebar"] {
 /* SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: black !important;
-
 /* BUTTON STYLE FIX */
 .stButton > button {
-    background: linear-gradient(90deg, #2b1055, #ff2e88);
+    background: linear-gradient(90deg, #ff0057, #7a00ff);
     color: #ffffff !important;
     border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 12px 24px;
+    border: 2px solid rgba(255,255,255,0.3);
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(255, 0, 87, 0.35);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #ff2e6f, #9b2dff);
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 8px 22px rgba(155, 45, 255, 0.4);
 }
 
 .stButton > button:hover {
