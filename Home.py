@@ -77,16 +77,13 @@ with col2:
     with left:
         st.image("mayie.png", width=220)
 
-        # 🔥 BUTTON + MESSAGE INLINE (Pahiga)
-        btn_col, msg_col = st.columns([1, 3])
+        # BUTTON
+        if st.button("🚀 Say Hello"):
+            st.session_state.hello = not st.session_state.hello
 
-        with btn_col:
-            if st.button("🚀 Say Hello"):
-                st.session_state.hello = not st.session_state.hello
-
-        with msg_col:
-            if st.session_state.hello:
-                st.write("👋 Hi there! Glad you’re here — feel free to explore my projects.")
+        # MESSAGE
+        if st.session_state.hello:
+            st.markdown("### 👋 Hi there! Glad you’re here — feel free to explore my projects.")
 
     with right:
         st.markdown("### Rea May M. Villanueva")
@@ -101,7 +98,7 @@ I enjoy turning ideas into real applications using Python and web technologies.
 
 st.markdown("---")
 
-# ---------------- GOALS ----------------
+# ---------------- GOALS / HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
