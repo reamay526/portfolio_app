@@ -6,12 +6,32 @@ st.markdown("""
     background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
 }
 
+/* CENTER EVERYTHING */
 .block-container {
     padding-top: 3rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
 }
 
+/* TEXT COLOR FIX */
 html, body, .stApp {
     color: #000000 !important;
+}
+
+/* CENTER HEADERS */
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* CENTER SUBHEADERS AND TEXT */
+.stMarkdown, .stWrite {
+    text-align: center;
+}
+
+/* OPTIONAL: BETTER SPACING */
+p {
+    line-height: 1.6;
 }
 </style>
 """, unsafe_allow_html=True)
