@@ -2,16 +2,17 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
 /* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Bold Arial;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* REMOVE TOP WHITE GAP */
+/* REMOVE TOP GAP */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
@@ -23,18 +24,21 @@ st.markdown("""
     padding-bottom: 3rem;
 }
 
-/* GLOBAL TEXT */
-html, body, .stApp, p, div, span, label, h1, h2, h3 {
-    color: #000000 !important;
+/* TEXT IMPROVEMENT */
+html, body, .stApp, p, div, span, label {
+    color: #111 !important;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-/* TITLE */
+/* HERO TITLE */
 .top-title {
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
     color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
 /* SIDEBAR */
@@ -56,7 +60,7 @@ section[data-testid="stSidebar"] div:hover {
 div.stButton > button {
     background: linear-gradient(90deg, #00c6ff, #7f00ff) !important;
     color: white !important;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 12px 24px;
     border: none;
     font-weight: 700;
@@ -64,58 +68,63 @@ div.stButton > button {
 }
 
 div.stButton > button:hover {
-    background: linear-gradient(90deg, #00e0ff, #9b2dff) !important;
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
-    box-shadow: 0 8px 22px rgba(0, 198, 255, 0.45);
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
+# ---------------- HERO TITLE ----------------
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- PROFILE ----------------
-col1, col2, col3 = st.columns([0.5, 3, 0.5])
+st.write("")
+
+# ---------------- HERO SECTION ----------------
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    st.image("mayie.png", width=240)
+
+    if st.button("🚀 Say Hello"):
+        st.success("Hello! Welcome to my portfolio 👋")
 
 with col2:
+    st.markdown("""
+    ### Rea May M. Villanueva
 
-    left, right = st.columns([1.5, 2.5], gap="large")
+    🎓 **BS Computer Science (3rd Year)**  
+    💻 **Aspiring Developer & UI Designer**  
+    🌐 **Web Development Enthusiast**
 
-    with left:
-        st.image("mayie.png", width=230)
+    ---
+    
+    I am a Computer Science student passionate about building **clean, functional, and user-friendly applications**.  
+    I enjoy transforming ideas into real systems using **Python and web technologies**.
 
-        # ✅ MOVED BUTTON HERE (UNDER IMAGE)
-        if st.button("🚀 Say Hello"):
-            st.success("Hello! Welcome to my portfolio 👋")
-
-    with right:
-        st.markdown("### Rea May M. Villanueva")
-        
-        st.write("🎓 BS Computer Science (3rd Year)")
-        st.write("💻 Aspiring Developer & UI Designer")
-        st.write("🌐 Interested in Web Development")
-
-        st.write("""
-       I am a Computer Science student passionate about building functional and user-friendly digital solutions. I enjoy turning ideas into real applications using Python and web technologies.
-
-I am continuously improving my skills in programming, interface design, and system development, with a strong interest in creating clean and efficient web applications.
-        """)
+    I continuously improve my skills in **programming, UI design, and system development**,  
+    aiming to build efficient and meaningful digital solutions.
+    """)
 
 st.markdown("---")
 
-# ---------------- INFO ----------------
+# ---------------- QUICK HIGHLIGHTS ----------------
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown("### 🎯 Goal")
-    st.write("To become a skilled and creative developer")
+    st.markdown("""
+    ### 🎯 Goal  
+    Become a skilled and creative developer
+    """)
 
 with c2:
-    st.markdown("### 🚀 Focus")
-    st.write("Building clean and functional web applications")
+    st.markdown("""
+    ### 🚀 Focus  
+    Web development & UI design
+    """)
 
 with c3:
-    st.markdown("### 🌱 Learning")
-    st.write("Improving Python, UI design, and web development skills")
+    st.markdown("""
+    ### 🌱 Learning  
+    Python • Streamlit • Frontend
+    """)
