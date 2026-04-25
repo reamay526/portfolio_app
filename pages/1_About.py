@@ -4,26 +4,34 @@ st.set_page_config(page_title="About", layout="wide")
 
 st.markdown("""
 <style>
+
+/* BACKGROUND FIX (CONSISTENT DESIGN) */
 .stApp {
-    background: linear-gradient(135deg, #3b1b5a, #e6e6e6, #ff4fa3);
+    background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
     font-family: Arial;
 }
 
-/* MAIN TEXT COLOR (SAFE) */
-html, body, .stApp {
-    color: #000000 !important;
+/* REMOVE TOP WHITE BAR */
+[data-testid="stHeader"] {
+    background: transparent !important;
 }
 
-/* CENTER CONTAINER */
+/* REMOVE CONTAINER WHITE BACKGROUND */
 .block-container {
+    background: transparent !important;
     padding-top: 3rem;
     max-width: 900px;
     margin: auto;
 }
 
+/* MAIN TEXT */
+html, body, .stApp {
+    color: #000000 !important;
+}
+
 /* CARD STYLE */
 .card {
-    background: rgba(255,255,255,0.80);
+    background: rgba(255,255,255,0.85);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
@@ -36,7 +44,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* SIDEBAR (SAFE FIX) */
+/* SIDEBAR */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
@@ -53,6 +61,7 @@ section[data-testid="stSidebar"] div:hover {
     background-color: rgba(255,255,255,0.15);
     border-radius: 10px;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
