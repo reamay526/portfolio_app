@@ -21,16 +21,17 @@ st.markdown("""
     padding-bottom: 2.5rem;
 }
 
-/* FORCE ALL TEXT TO BLACK */
-html, body, .stApp, p, div, span, label, h1, h2, h3, input, textarea {
+/* TEXT (BLACK FOR READABILITY) */
+html, body, .stApp, p, div, span, label, input, textarea {
     color: #000000 !important;
     font-weight: 700 !important;
 }
 
-/* TITLE (still readable on gradient background) */
-h1 {
+/* TITLE */
+h1, h2, h3 {
     text-align: center;
     font-weight: 900 !important;
+    color: #000000 !important;
 }
 
 /* GLASS CARD */
@@ -51,7 +52,6 @@ h1 {
 input, textarea {
     border-radius: 10px !important;
     font-weight: 700 !important;
-    color: #000000 !important;
 }
 
 /* BUTTON */
@@ -65,15 +65,20 @@ div.stButton > button {
     width: 100%;
 }
 
-/* LINKS */
+div.stButton > button:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+/* LINKS (UPDATED COLOR) */
 a {
     text-decoration: none;
     font-weight: 800;
-    color: #000000;
+    color: #4b0082 !important;   /* deep purple */
 }
 
 a:hover {
-    color: #333333;
+    color: #ff0057 !important;   /* pink hover */
 }
 
 /* SIDEBAR */
@@ -107,7 +112,7 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- LINKS ----------------
+# ---------------- SOCIAL LINKS ----------------
 st.markdown("""
 <div class="card">
 <h3>🌐 Connect With Me</h3>
