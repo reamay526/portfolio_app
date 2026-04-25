@@ -21,15 +21,20 @@ html, body, .stApp, p, div, span, label, h1, h2, h3 {
     margin-bottom: 30px;
 }
 
-/* SIDEBAR VISIBILITY FIX */
 section[data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.95);
-    color: black !important;
+    background: linear-gradient(180deg, #3b1b5a, #7a00ff);
 }
 
 /* SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
-    color: black !important;
+    color: white !important;
+    font-weight: 500;
+}
+
+/* HOVER EFFECT */
+section[data-testid="stSidebar"] div:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
 }
 
 /* BUTTON STYLE FIX */
