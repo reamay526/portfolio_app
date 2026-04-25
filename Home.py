@@ -25,7 +25,7 @@ st.markdown("""
 
 /* TEXT */
 html, body, .stApp, p, div, span, label, h1, h2, h3 {
-    font-weight: 300;
+    font-weight: 500;
     color: #000000 !important;
 }
 
