@@ -2,46 +2,56 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="wide")
 
+# ---------------- STYLE (SAME DESIGN SYSTEM) ----------------
 st.markdown("""
 <style>
 
-/* BACKGROUND FIX */
+/* BACKGROUND */
 .stApp {
     background: linear-gradient(135deg, #3b1b5a, #ff4fa3, #7a00ff);
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
-/* REMOVE TOP WHITE BAR */
+/* HEADER */
 [data-testid="stHeader"] {
     background: transparent !important;
 }
 
 /* CONTAINER */
 .block-container {
-    background: transparent !important;
-    padding-top: 3rem;
-    max-width: 900px;
-    margin: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
 }
 
 /* TEXT */
-html, body, .stApp {
-    color: #000000 !important;
-}
-
-/* CARD STYLE */
-.card {
-    background: rgba(255,255,255,0.88);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
+html, body, .stApp, p, div, span, label {
+    color: #111111 !important;
+    font-weight: 700 !important;
+    line-height: 1.7;
 }
 
 /* HEADINGS */
 h1, h2, h3 {
+    color: #000000 !important;
+    font-weight: 900 !important;
+}
+
+/* TITLE */
+.top-title {
     text-align: center;
+    font-size: 38px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    margin-bottom: 18px;
 }
 
 /* SIDEBAR */
@@ -51,76 +61,51 @@ section[data-testid="stSidebar"] {
 
 section[data-testid="stSidebar"] * {
     color: white !important;
-    font-weight: 500;
-}
-
-section[data-testid="stSidebar"] div:hover {
-    background-color: rgba(255,255,255,0.15);
-    border-radius: 10px;
+    font-weight: 700 !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- TITLE ----------------
-st.title("📘 About Me")
+st.markdown('<div class="top-title">📘 About Me</div>', unsafe_allow_html=True)
 
-# ---------------- INTRO CARD ----------------
+# ---------------- CONTENT ----------------
 st.markdown("""
 <div class="card">
-<h3>👋 Hello, I'm Rea May</h3>
+<h3>👩‍💻 Who I Am</h3>
 <p>
-A passionate Computer Science student who enjoys building clean, functional, and user-friendly applications.
-I love turning ideas into real systems using code and creativity.
+I am Rea May Villanueva, a Computer Science student passionate about building clean, functional, and user-friendly web applications.
+I enjoy turning ideas into real systems using Python and Streamlit.
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- EDUCATION ----------------
 st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
 <p>
-Bachelor of Science in Computer Science<br>
-3rd Year College Student<br><br>
-Focused on software development, web technologies, and UI/UX design.
+Bachelor of Science in Computer Science (3rd Year)
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- SKILLS SNAPSHOT ----------------
 st.markdown("""
 <div class="card">
-<h3>💡 What I Do</h3>
+<h3>🚀 Developer Mindset</h3>
 <p>
-✔ Build web applications using Python & Streamlit<br>
-✔ Design simple and clean user interfaces<br>
-✔ Practice front-end development (HTML/CSS)<br>
-✔ Develop school and personal projects
+I focus on simplicity, usability, and clean UI design. I believe good software should not only work — it should feel easy to use.
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- GOALS ----------------
 st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
 <p>
 ✔ Become a full-stack developer<br>
 ✔ Improve UI/UX design skills<br>
-✔ Build real-world applications<br>
-✔ Gain internship experience in tech industry
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------- PERSONALITY / BIO ----------------
-st.markdown("""
-<div class="card">
-<h3>🚀 Developer Mindset</h3>
-<p>
-I believe in continuous learning and improvement.
-Every project I build helps me grow my skills in problem-solving, creativity, and logic.
+✔ Build real-world web applications
 </p>
 </div>
 """, unsafe_allow_html=True)
