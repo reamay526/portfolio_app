@@ -1,65 +1,84 @@
-# 📌 Personal Portfolio Web App (Streamlit)
+# 🌐 Personal Portfolio Web App (Streamlit)
 
 ## 👩‍💻 Overview
-This is a multipage personal portfolio web application built using Streamlit (Python).  
-It showcases my profile, skills, projects, and contact information in a clean and interactive web interface.
 
----
+This is a multipage personal portfolio web application built using
+Streamlit (Python).\
+It showcases my personal profile, skills, projects, and contact
+information in a modern, interactive, and responsive web interface.
 
-## 🌐 Live Demo
+The goal of this project is to demonstrate web development skills using
+Python and Streamlit, including UI design, interactivity, and multipage
+navigation.
+
+------------------------------------------------------------------------
+
+## 🚀 Live Application
+
 https://reamay526-portfolio-app-home-veqy4o.streamlit.app
 
----
+------------------------------------------------------------------------
 
 ## 📁 Project Structure
-Home.py  
-pages/  
-  About.py  
-  Skills.py  
-  Projects.py  
-  Contact.py  
-mayie.png  
-requirements.txt  
 
----
+Home.py pages/ About.py Skills.py Projects.py Contact.py
+
+mayie.png requirements.txt README.md
+
+------------------------------------------------------------------------
 
 ## 📌 Features
-- 🏠 Home page with personal introduction  
-- 👤 About Me section with background and education  
-- 💻 Skills page with progress bars and tools  
-- 💼 Projects showcase with project cards  
-- 📬 Contact page with form validation and social links  
-- 🎨 Modern UI with gradient background and glassmorphism design  
-- 📱 Multipage navigation using Streamlit  
 
----
+-   🏠 Home Page -- Personal introduction and welcome section\
+-   👤 About Page -- Background, education, and interests\
+-   💻 Skills Page -- Technical skills with progress indicators\
+-   💼 Projects Page -- Showcase of personal and academic projects\
+-   📬 Contact Page -- Interactive contact form with validation and
+    social links\
+-   🎨 Modern UI with gradient background and glassmorphism design\
+-   📱 Fully responsive layout using Streamlit columns\
+-   🔄 Multipage navigation using Streamlit's built-in system
+
+------------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
-- Python  
-- Streamlit  
-- HTML/CSS (via Streamlit markdown styling)  
 
----
+-   Python\
+-   Streamlit\
+-   HTML/CSS (via Streamlit markdown styling)
 
-## 🚀 How to Run Locally
+------------------------------------------------------------------------
 
-### 1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+## ⚙️ How to Run Locally
 
-### 2. Install Streamlit
-pip install streamlit
+1.  Clone the repository git clone
+    https://github.com/reamay526/portfolio_app.git
 
-### 3. Run the app
-streamlit run Home.py
+2.  Install dependencies pip install streamlit
 
----
+3.  Run the application streamlit run Home.py
+
+------------------------------------------------------------------------
+
+## 🎯 Purpose of the Project
+
+This project was created for academic purposes to: - Practice Python web
+development using Streamlit\
+- Build a structured multipage web application\
+- Improve UI/UX design skills\
+- Learn deployment using Streamlit Community Cloud
+
+------------------------------------------------------------------------
 
 ## 👨‍🎓 Developer
-Rea May Villanueva  
-BS Computer Science Student  
-DEBESMSCAT  
 
----
+Rea May Villanueva\
+Bachelor of Science in Computer Science\
+DEBESMSCAT
+
+------------------------------------------------------------------------
 
 ## 📌 Note
-This project was developed for academic purposes to demonstrate a multipage Streamlit web application with interactive UI design and deployment using Streamlit Community Cloud.
+
+This project demonstrates a fully functional multipage web application
+with interactive components and a modern UI design using Streamlit.
