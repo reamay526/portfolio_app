@@ -33,11 +33,19 @@ section[data-testid="stSidebar"] * {
 
 /* BUTTON STYLE FIX */
 .stButton > button {
-    background: linear-gradient(90deg, #3b1b5a, #ff4fa3);
+    background: linear-gradient(90deg, #2b1055, #ff2e88);
     color: #ffffff !important;
     border-radius: 20px;
     padding: 10px 20px;
     border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #3a1470, #ff4fa3);
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
 }
 
 .stButton > button:hover {
