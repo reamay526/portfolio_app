@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -67,10 +66,8 @@ section[data-testid="stSidebar"] * {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown('<div class="top-title">📘 About Me</div>', unsafe_allow_html=True)
 
-# ---------------- PROFILE ----------------
 st.markdown("""
 <div class="card">
 <h3>👩‍💻 Profile</h3>
@@ -82,7 +79,6 @@ I enjoy turning ideas into real digital solutions using modern technologies.
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- EDUCATION ----------------
 st.markdown("""
 <div class="card">
 <h3>🎓 Education</h3>
@@ -94,7 +90,6 @@ DEBESMSCAT
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- SKILLS SUMMARY ----------------
 st.markdown("""
 <div class="card">
 <h3>💻 Technical Background</h3>
@@ -104,7 +99,6 @@ HTML • CSS • Python • Java • GitHub • VS Code • Streamlit
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- INTERESTS ----------------
 st.markdown("""
 <div class="card">
 <h3>🚀 Interests</h3>
@@ -115,7 +109,6 @@ I enjoy learning how systems work and how to improve user experience through cle
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- GOALS ----------------
 st.markdown("""
 <div class="card">
 <h3>🎯 Goals</h3>
