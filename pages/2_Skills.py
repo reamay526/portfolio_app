@@ -67,13 +67,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.write("Python")
-st.progress(85)
+st.progress(70)
 
 st.write("HTML")
-st.progress(88)
+st.progress(70)
 
 st.write("CSS")
-st.progress(87)
+st.progress(75)
 
 st.markdown("""
 <div class="card">
