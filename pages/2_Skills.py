@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Skills", layout="wide")
 
-# ---------------- STYLE (CONSISTENT DESIGN) ----------------
 st.markdown("""
 <style>
 
@@ -59,10 +58,8 @@ section[data-testid="stSidebar"] * {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown("<h1>⚡ My Skills</h1>", unsafe_allow_html=True)
 
-# ---------------- PROGRAMMING SKILLS ----------------
 st.markdown("""
 <div class="card">
 <h3>💻 Programming Skills</h3>
@@ -78,7 +75,6 @@ st.progress(88)
 st.write("CSS")
 st.progress(87)
 
-# ---------------- TOOLS SECTION (IMPROVED) ----------------
 st.markdown("""
 <div class="card">
 <h3>🛠 Development Tools</h3>
@@ -96,7 +92,6 @@ with col2:
 with col3:
     st.markdown("✔ Streamlit")
 
-# ---------------- BONUS SECTION (ADDED A+ TOUCH) ----------------
 st.markdown("""
 <div class="card">
 <h3>🚀 Focus Areas</h3>
