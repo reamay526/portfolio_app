@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Portfolio", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -68,21 +67,21 @@ div.stButton > button:hover {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
+
 st.markdown('<div class="top-title">👋 Welcome to My Portfolio</div>', unsafe_allow_html=True)
 
-# ---------------- STATE ----------------
+
 if "hello" not in st.session_state:
     st.session_state.hello = False
 
-# ---------------- HERO SECTION ----------------
+
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 with col2:
 
     left, right = st.columns([1.2, 2.8], gap="large")
 
-    # LEFT SIDE
+
     with left:
         st.image("mayie.png", width=220)
 
@@ -92,7 +91,6 @@ with col2:
         if st.session_state.hello:
             st.success("👋 Hi there! Glad you’re here — explore my portfolio.")
 
-    # RIGHT SIDE (NAME BIGGER HERE)
     with right:
 
         st.markdown("""
@@ -113,7 +111,6 @@ with col2:
 I build clean and user-friendly web applications using Python and Streamlit.
         """)
 
-# ---------------- FOOTER ----------------
 st.markdown("---")
 
 c1, c2, c3 = st.columns(3)
