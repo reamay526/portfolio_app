@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Contact", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -99,10 +98,8 @@ section[data-testid="stSidebar"] * {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown("<h1>📬 Contact Me</h1>", unsafe_allow_html=True)
 
-# ---------------- FORM CARD ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
 name = st.text_input("Your Name")
@@ -117,7 +114,6 @@ if st.button("🚀 Send Message"):
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- SOCIAL LINKS CARD ----------------
 st.markdown("""
 <div class="card">
 <h3 style="text-align:center;">🌐 Connect With Me</h3>
