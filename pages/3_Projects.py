@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Projects", layout="wide")
 
-# ---------------- STYLE ----------------
 st.markdown("""
 <style>
 
@@ -59,10 +58,8 @@ section[data-testid="stSidebar"] * {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown("<h1>💼 My Projects</h1>", unsafe_allow_html=True)
 
-# ---------------- PROJECT GRID ----------------
 col1, col2 = st.columns(2)
 
 with col1:
@@ -81,7 +78,6 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-# ---------------- THIRD PROJECT ----------------
 st.markdown("""
 <div class="card">
 <h3>🎨 Bootstrap Project</h3>
